@@ -1,12 +1,12 @@
 #bootstrap-override {
-    background-color: rgb(170, 170, 170);
-    font-family: fantasy;
+    background-color: rgb(204, 204, 204);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
     padding-top: 10px;
 }
 
 #nav-style  {
-    background-color: rgb(170, 170, 170);
+    background-color: rgb(204, 204, 204);
 }
 
 .logo1 {
