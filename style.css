@@ -5,6 +5,10 @@
     padding-top: 10px;
 }
 
+#navbar-nav {
+  color: red;
+}
+
 #nav-style  {
     display: block;
     width: 75%;
@@ -12,7 +16,15 @@
     margin-top: 1rem;
     margin-bottom: 2rem;
     background-color: white;
-    color: black;
+}
+
+nav {
+  color: black;
+}
+
+.headshot {
+  max-height: 300px;
+  float: left;
 }
 
 .logo1 {
@@ -59,14 +71,14 @@ h1 {
 }
 
 .gallery1 {
-    border: 4px solid black;
+    border: 8px solid white;
     max-width: 100%;
     max-height: 100%;
     transition: all 1s;
 }
 
 .gallery1:hover {
-    border: 4px solid white;
+    border: 8px solid black;
     transform: scale(1.1);
 }
 
