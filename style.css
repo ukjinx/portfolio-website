@@ -9,7 +9,8 @@
     display: block;
     width: 75%;
     padding-left: 10rem;
-    padding-bottom: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
     background-color: white;
     color: black;
 }
