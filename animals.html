@@ -1,60 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" type="text/css" href="style-gallery.css">  
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="style-gallery.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="script.js"></script>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JJ Portfolio</title>
 </head>
 <body id="bootstrap-override" oncontextmenu="return false;">
-  <div id="logo-container">
-    <a href="index.html">
-    <img src="gallery1/joe-dark_2k (1).png" class="logo1">
+  <div class="website-logo">
+    <img src="gallery1/joe-light_2k.png" class="joejenkinsonlogo">
   </a>
-  <div id="nav-style">
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Portfolio
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="landscape.html">Landscapes</a>
-              <a class="dropdown-item active" href="animals.html">Animals</a>
-              <!-- <a class="dropdown-item" href="#">Urban</a> -->
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              About
-            </a>
-             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="kit-list.html">Kit List</a>
-              <a class="dropdown-item" href="contact.html">Contact</a>
-            </div>
-          </li>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
   </div>
+ 
+  <div class="navbar-box">
+    <div class="navbar">
+        <a class="nav-link" href="home.html">Home</a>
+        <a class="nav-link" href="aboutme.html">About Me</a>
+        <div class="dropdown">
+            <button class="nav-link dropbtn">Portfolio
+        <i class="fa fa-caret-down navbar-position"></i>
+      </button>
+            <div class="dropdown-content">
+                <a class="nav-link" href="pano.html">Pano</a>
+                <a class="nav-link" href="landscape.html">Landscapes</a>
+                <a class="nav-link" href="animals.html">Animals</a>
+                <a class="nav-link" href="drone.html">Drone</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 </div>
     <div class="container">
-        <a href="#img1"><img src="animals-gallery/deerandmoon.JPG" class="squarephoto gallery1"></a>
-          <a href="#img2"><img src="animals-gallery/newforestponies.jpg" class="landscapephoto gallery1"></a>        
-          <a href="#img3"><img src="animals-gallery/essexdeer.jpg" class="landscapephoto gallery1"></a>
+        <a href="#img3"><img src="animals-gallery/essexdeer.jpg" class="landscapephoto gallery1"></a>
+        <a href="#img2"><img src="animals-gallery/newforestponies.jpg" class="landscapephoto gallery1"></a>        
+        <a href="#img15"><img src="animals-gallery/_K0A9667.jpg" class="portraitphoto gallery1"></a>
+        <a href="#img1"><img src="animals-gallery/deerandmoon.JPG" class="squarephoto gallery1"></a>    
+        <a href="#img4"><img src="animals-gallery/_K0A0176.jpg" class="landscapephoto gallery1"></a>
+        <a href="#img7"><img src="animals-gallery/_K0A0590.jpg" class="portraitphoto gallery1"></a>
+        <a href="#img5"><img src="animals-gallery/_K0A0575.jpg" class="landscapephoto gallery1"></a>
+        <a href="#img6"><img src="animals-gallery/_K0A0588.jpg" class="landscapephoto gallery1"></a>
+        <a href="#img8"><img src="animals-gallery/_K0A4863.jpg" class="portraitphoto gallery1"></a>          <a href="#img9"><img src="animals-gallery/_K0A5325.jpg" class="landscapephoto gallery1"></a>
+        <a href="#img10"><img src="animals-gallery/_K0A6161.jpg" class="portraitphoto gallery1"></a>
+        <a href="#img11"><img src="animals-gallery/_K0A6596.jpg" class="landscapephoto gallery1"></a>
+        <a href="#img12"><img src="animals-gallery/_K0A6642.jpg" class="landscapephoto gallery1"></a>
+        <a href="#img13"><img src="animals-gallery/_K0A7561.jpg" class="landscapephoto gallery1"></a>
+        <a href="#img14"><img src="animals-gallery/_K0A7620.jpg" class="landscapephoto gallery1"></a>
       <a href="#_" class="lightbox" id="img1">
         <img src="animals-gallery/deerandmoon.JPG">
       </a>
@@ -63,6 +57,42 @@
       </a>
       <a href="#_" class="lightbox" id="img3">
         <img src="animals-gallery/essexdeer.jpg">
+      </a>
+      <a href="#_" class="lightbox" id="img4">
+        <img src="animals-gallery/_K0A0176.jpg">
+      </a>
+      <a href="#_" class="lightbox" id="img5">
+        <img src="animals-gallery/_K0A0575.jpg">
+      </a>
+      <a href="#_" class="lightbox" id="img6">
+        <img src="animals-gallery/_K0A0588.jpg">
+      </a>
+      <a href="#_" class="lightbox" id="img7">
+        <img src="animals-gallery/_K0A0590.jpg">
+      </a>
+      <a href="#_" class="lightbox" id="img8">
+        <img src="animals-gallery/_K0A4863.jpg">
+      </a>
+      <a href="#_" class="lightbox" id="img9">
+        <img src="animals-gallery/_K0A5325.jpg">
+      </a>
+      <a href="#_" class="lightbox" id="img10">
+        <img src="animals-gallery/_K0A6161.jpg">
+      </a>
+      <a href="#_" class="lightbox" id="img11">
+        <img src="animals-gallery/_K0A6596.jpg">
+      </a>
+      <a href="#_" class="lightbox" id="img12">
+        <img src="animals-gallery/_K0A6642.jpg">
+      </a>
+      <a href="#_" class="lightbox" id="img13">
+        <img src="animals-gallery/_K0A7561.jpg">
+      </a>
+      <a href="#_" class="lightbox" id="img14">
+        <img src="animals-gallery/_K0A7620.jpg">
+      </a>
+      <a href="#_" class="lightbox" id="img15">
+        <img src="animals-gallery/_K0A9667.jpg">
       </a>
 </body>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
