@@ -120,17 +120,17 @@ em {
 
 #portfolio-thumbnails {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
 }
 
-.empty-space {
-  padding-top: 3rem;
-}
+
 
 .portfolio-cover {
   border: 0.5rem solid #412A22;
   width: auto;
   height: 20rem;
+  margin: 1.5rem;
 }
 
 .pano-cover {
