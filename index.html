@@ -2,11 +2,10 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="cover-style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Bree+Serif&family=Courgette&family=Great+Vibes&display=swap" rel="stylesheet">
@@ -14,29 +13,69 @@
 </head>
 
 <body>
-
     <div class="website-logo">
-        <img class="joejenkinsonlogo" src="gallery1/joe-light_2k.png" alt="logo" draggable="false">
+        <img class="joejenkinsonlogo" src="gallery1/joe-light_2k.png" alt="logo">
     </div>
 
-    <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
-        <img class="image" src="gallery1/0K0A0943.jpg" draggable="false" />
-        <img class="image" src="gallery1/DJI_0004.jpg" draggable="false" />
-        <img class="image" src="gallery1/K0A5325.jpg" draggable="false" />
-        <img class="image" src="gallery1/K0A5930.jpg" draggable="false" />
-        <img class="image" src="gallery1/DJI_0132.jpg" draggable="false" />
-        <img class="image" src="gallery1/K0A6642.jpg" draggable="false" />
-        <img class="image" src="gallery1/K0A7561.jpg" draggable="false" />
-        <img class="image" src="gallery1/0K0A9688.jpg" draggable="false" />
-        <img class="image" src="gallery1/K0A6596.jpg" draggable="false" />
-        <!-- <img class="image" src="" draggable="false" /> -->
+
+    <div class="navbar-box">
+        <div class="navbar">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="aboutme.html">About Me</a>
+            <div class="dropdown">
+                <button class="nav-link dropbtn">Portfolio
+            <i class="fa fa-caret-down navbar-position"></i>
+          </button>
+                <div class="dropdown-content">
+                    <a class="nav-link" href="pano.html">Pano</a>
+                    <a class="nav-link" href="landscape.html">Landscapes</a>
+                    <a class="nav-link" href="animals.html">Animals</a>
+                    <a class="nav-link" href="drone.html">Drone</a>
+                </div>
+            </div>
+            <!-- <a class="nav-link" href="contact.html">Contact</a> -->
+        </div>
     </div>
 
-    <div id="enter-button">
-        <a class="enter-link" href="home.html">Click Here To Enter</a>
+    <p>
+        Hello! I'm Joe Jenkinson, a passionate landscape and wildlife photographer based in South Wales. With over 15 years of experience, my journey in photography has been a thrilling exploration of the beauty that surrounds us.
+    </p>
+    <p>
+        My work is a visual celebration of the diverse landscapes and captivating wildlife found in the enchanting corners of the UK and beyond. Through the lens, I strive to capture the essence of each moment, creating images that tell stories and evoke emotions.
+    </p>
+    <p>
+        Join me on this visual journey as I share my love of nature through the art of photography. Explore the galleries to witness the magic of the world around us through my lens.
+    </p>
+    <p>
+        Thank you for visiting my website, and I hope you find inspiration and joy in the images I've had the privilege to capture.
+    </p>
+
+
+    <!-- <p>My name is Joe Jenkinson, I am a <em>Landscape</em> and <em>Wildlife</em> photographer based in South Wales.</p>
+
+    <p>Please click on the images below to view my portfolio images.</p> -->
+    <div class="empty-space">
+        <!-- Empty Div for spacing -->
     </div>
 
-    <script src="script.js"></script>
+
+    <div id="top-portfolio">
+        <a href="pano.html">
+            <img class="pano-cover portfolio-border" src="pano-gallery/K0A7095-Pano.jpg" alt="Ogwen Valley">
+        </a>
+    </div>
+    <div id="portfolio-thumbnails">
+        <a href="landscape.html">
+            <img class="portfolio-cover portfolio-border" src="landscape-gallery/tryfancloud.jpg" alt="Tryfan">
+        </a>
+        <a href="animals.html">
+            <img class="portfolio-cover portfolio-border" src="animals-gallery/newforestponies.jpg" alt="Newfores Ponies">
+        </a>
+        <a href="drone.html">
+            <img class="portfolio-cover portfolio-border" src="drone-gallery/DJI_0132.jpg" alt="Snow Church">
+        </a>
+    </div>
+
 </body>
 
 </html>
