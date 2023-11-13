@@ -129,7 +129,7 @@ em {
 
 .portfolio-cover {
   border: 0.5rem solid #412A22;
-  width: 20rem;
+  width: auto;
   height: 20rem;
 }
 
