@@ -155,3 +155,33 @@ em {
   height: 20rem;
   padding-bottom: 2.5rem;
 }
+
+.pano-container {
+  position: relative;
+  text-align: center;
+}
+
+.landscape-container {
+  position: relative;
+  text-align: center;
+}
+
+.animals-container {
+  position: relative;
+  text-align: center;
+}
+
+.drone-container {
+  position: relative;
+  text-align: center;
+}
+
+.centered {
+  color: #F2E6B6;
+  text-shadow: #292929 5px 0 5px;
+  font-size: larger;
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
