@@ -124,7 +124,29 @@ em {
   align-items: center;
 }
 
+.article-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.headshot {
+  height: auto;
+  width: 40%;
+  float: left;
+  padding: 2rem;
+}
+
+.article-text {
+  padding-right: 10px;
+  float: right;
+}
+
+.kit-list-text {
+  padding-top: 5rem;
+  display: flex;
+  justify-content: center;
+}
 
 .portfolio-cover {
   border: 0.5rem solid #412A22;
