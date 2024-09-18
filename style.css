@@ -122,8 +122,9 @@ p {
   text-align: center;
 }
 
-.aboutme {
-  width: 50%
+#aboutme {
+  width: 50%;
+  color: red;
 }
 
 em {
