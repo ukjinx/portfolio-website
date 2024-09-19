@@ -122,6 +122,14 @@ p {
   text-align: center;
 }
 
+.welcomeMessage {
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: auto;
+}
+
 em {
   color: #8F9E8B;
   font-weight: bold;
