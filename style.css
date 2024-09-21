@@ -8,6 +8,12 @@ a {
   text-decoration: none;
 }
 
+.shopLink {
+  color: #F2E6B6;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
 /* #navbar {
   text-align: center;
   overflow: hidden;
