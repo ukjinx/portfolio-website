@@ -177,29 +177,22 @@ em {
   flex-wrap: wrap;
 }
 
-.article-container {
+/* .article-container {
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 
-.headshot {
-  height: auto;
-  width: 40%;
-  float: left;
-  padding: 2rem;
-}
-
-.article-text {
+/* .article-text {
   padding-right: 10px;
   float: right;
-}
+} */
 
-.kit-list {
+/* .kit-list {
   margin-left: auto;
   margin-right: auto;
   width: 20rem;
-}
+} */
 
 ul {
   margin-left: auto;
@@ -295,4 +288,31 @@ hr.style-seven:before { /* Not really supposed to work, but does */
   border-color: #5B7876;
   border-width: 0 0 1px 0;
   border-radius: 20px;
+}
+
+.headshot {
+  max-width: 90%;
+  height: auto;
+  padding: 1rem;
+}
+
+.article-text {
+  max-width: 90%;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Kit List */
+.kit-list {
+  margin: auto;
+  max-width: 90%;
+}
+
+/* Article and Text */
+.article-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
 }
