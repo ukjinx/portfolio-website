@@ -297,7 +297,7 @@ hr.style-seven:before { /* Not really supposed to work, but does */
 }
 
 .headshot {
-  max-width: 90%;
+  max-width: 40%;
   height: auto;
   padding: 1rem;
 }
