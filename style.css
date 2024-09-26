@@ -147,6 +147,7 @@ a:hover {
   justify-content: center;
   align-items: center;
   border-bottom: solid 1px;
+  padding-bottom: 2rem;
   margin-bottom: 2rem;
 }
 
