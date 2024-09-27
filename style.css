@@ -37,7 +37,7 @@ a:hover {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 /* Add an active class to highlight the current page */
@@ -59,7 +59,7 @@ a:hover {
 
 /* Style the dropdown button to fit inside the topnav */
 .dropdown .dropbtn {
-  font-size: 12px;
+  font-size: 14px;
   border: none;
   outline: none;
   color: #F2E6B6;
@@ -93,12 +93,14 @@ a:hover {
 .topnav a:hover, .dropdown:hover .dropbtn {
   background-color: #F2E6B6;
   color: black;
+  border-radius: 1rem;
 }
 
 /* Add a grey background to dropdown links on hover */
 .dropdown-content a:hover {
   background-color: #F2E6B6;
   color: black;
+  border-radius: 1rem;
 }
 
 /* Show the dropdown menu when the user moves the mouse over the dropdown button */
@@ -147,6 +149,9 @@ a:hover {
   justify-content: center;
   align-items: center;
   border-bottom: solid 1px;
+  border-top: solid 1px;
+  padding-top: 2rem;
+  margin-top: 2rem;
   padding-bottom: 2rem;
   margin-bottom: 2rem;
 }
@@ -160,7 +165,7 @@ a:hover {
 
 .joejenkinsonlogo {
   height: auto;
-  width: 35%;
+  width: 75%;
 }
 
 h1, h2 {
