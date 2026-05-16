@@ -1,0 +1,41 @@
+[
+    {
+        "src": "landscape-gallery/autumn-castle.jpg",
+        "alt": "Puffin in flight"
+    },
+
+    {
+        "src": "animals-gallery/fox-snow.jpg",
+        "alt": "Fox in snow"
+    },
+
+    {
+        "src": "animals-gallery/deer-moon.jpg",
+        "alt": "Deer under moon"
+    },
+
+    {
+        "src": "animals-gallery/otter.jpg",
+        "alt": "Otter"
+    },
+    {
+        "src": "animals-gallery/heron.jpg",
+        "alt": "Heron"
+    },
+    {
+        "src": "animals-gallery/owl-black.jpg",
+        "alt": "Owl"
+    },
+    {
+        "src": "animals-gallery/owl-white.jpg",
+        "alt": "Owl"
+    },
+    {
+        "src": "animals-gallery/newforestponies.jpg",
+        "alt": "Ponies"
+    },
+    {
+        "src": "animals-gallery/puffin-solo.jpg",
+        "alt": "Puffin"
+    }
+]

@@ -2,169 +2,95 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" type="text/css" href="style-gallery.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="icon" type="image/x-icon" href="gallery1/favicon.png">
-    <script src="script.js"></script>
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JJ Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-gallery.css">
+    <link rel="icon" type="image/x-icon" href="gallery1/favicon.png">
+    <title>Joe Jenkinson Photography</title>
 </head>
 
-<body id="bootstrap-override" oncontextmenu="return false;">
+<body>
+
+    <!-- =========================
+         Navigation
+    ========================== -->
+
     <div class="website-logo">
-        <img src="gallery1/joe-light_2k.png" class="joejenkinsonlogo">
-        </a>
+        <img class="joejenkinsonlogo"
+             src="gallery1/joe-light_2k.png"
+             alt="Joe Jenkinson Photography logo">
     </div>
 
     <div class="topnav" id="myTopnav">
+
         <a href="index.html" class="active">Home</a>
+
         <div class="dropdown">
-          <button class="dropbtn">Portfolio
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="landscape.html">- Landscape</a>
-            <a href="animals.html">- Wildlife</a>
-            <a href="pano.html">- Pano</a>
-            <a href="drone.html">- Drone</a>
-          </div>
-        </div>
-        <a href="https://www.etsy.com/uk/shop/JoeJPhotography">Prints</a>
-        <a href="aboutme.html">About</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-      </div>
+            <button class="dropbtn">
+                Galleries
+                <i class="fa fa-caret-down"></i>
+            </button>
+
+            <div class="dropdown-content">
+
+                <div class="dropdown-content-inner">
             
-            <!-- <a class="nav-link" href="contact.html">Contact</a> -->
+                    <a href="landscape.html">Landscapes</a>
+                    <a href="animals.html">Wildlife</a>
+                    <a href="pano.html">Panoramic</a>
+                    <a href="drone.html">Drone</a>
+            
+                </div>
+            
+            </div>
         </div>
-    </div>
+
+        <a href="prints.html">Prints</a>
+        <a href="aboutme.html">About</a>
+        <a href="contact.html">Contact</a>
+
+        <a href="javascript:void(0);"
+           class="icon"
+           onclick="myFunction()">&#9776;</a>
 
     </div>
-    </div>
-    <div class="container">
-        <!-- <a href="#img16"><img src="landscape-gallery" class="landscapephoto gallery1"></a> -->
 
-        <a href="#img31"><img src="landscape-gallery/autumncastle.jpg" class="landscapephoto gallery1"></a>
-        <a href="#img1"><img src="landscape-gallery/cwm-idwal.jpg" class="landscapephoto gallery1"></a>
-        <a href="#img2"><img src="landscape-gallery/lonely-tree.jpg" class="portraitphoto gallery1"></a>
-        <a href="#img3"><img src="landscape-gallery/rainbow-york.jpg" class="landscapephoto gallery1"></a>
-        <a href="#img4"><img src="landscape-gallery/waterfall-york.jpg" class="portraitphoto gallery1"></a>
-        <a href="#img5"><img src="landscape-gallery/iss-park.jpg" class="landscapephoto gallery1"></a>
-        <a href="#img6"><img src="landscape-gallery/menai-bridge.jpg" class="landscapephoto gallery1"></a>
-        <a href="#img7"><img src="landscape-gallery/boat-house.jpg" class="landscapephoto gallery1"></a>
-        <a href="#img8"><img src="landscape-gallery/beach-houses.jpg" class="landscapephoto gallery1"></a>
-        <a href="#img9"><img src="landscape-gallery/millenium-bridge.jpg" class="landscapephoto gallery1"></a>
-        <a href="#img10"><img src="landscape-gallery/waves-crash.jpg" class="landscapephoto gallery1"></a>
-        <a href="#img11"><img src="landscape-gallery/fog-dog.jpg" class="landscapephoto gallery1"></a>
-        <a href="#img12"><img src="landscape-gallery/tryfan-clouds.jpg" class="landscapephoto gallery1"></a>
-        <a href="#img13"><img src="landscape-gallery/tryfan-stream.jpg" class="portraitphoto gallery1"></a>
-        <a href="#img14"><img src="landscape-gallery/wind-turbine.jpg" class="portraitphoto gallery1"></a>
-        <a href="#img15"><img src="landscape-gallery/mountain-range.jpg" class="landscapephoto gallery1"></a>
-        <a href="#img17"><img src="landscape-gallery/tree-fog.jpg" class="landscapephoto gallery1"></a>
-        <a href="#img18"><img src="landscape-gallery/viaduct-top.jpg" class="landscapephoto gallery1"></a>
-        <a href="#img19"><img src="landscape-gallery/pen-y-fan.jpg" class="landscapephoto gallery1"></a>
-        <a href="#img20"><img src="landscape-gallery/norway-rainbow.jpg" class="landscapephoto gallery1"></a>
-        <a href="#img21"><img src="landscape-gallery/pine-fog.jpg" class="landscapephoto gallery1"></a>
-        <a href="#img22"><img src="landscape-gallery/forest-rays.jpg" class="portraitphoto gallery1"></a>
-        <a href="#img23"><img src="landscape-gallery/brecon-trees.jpg" class="portraitphoto gallery1"></a>
-        <a href="#img24"><img src="landscape-gallery/fishing-boat.jpg" class="portraitphoto gallery1"></a>
-        <a href="#img25"><img src="landscape-gallery/derwent-water.jpg" class="landscapephoto gallery1"></a>
-        <a href="#img26"><img src="landscape-gallery/beach-waves.jpg" class="landscapephoto gallery1"></a>
-        <a href="#img27"><img src="landscape-gallery/newforest.jpg" class="landscapephoto gallery1"></a>
-        <a href="#img28"><img src="landscape-gallery/mountain-sunset.jpg" class="landscapephoto gallery1"></a>
-        <a href="#img29"><img src="landscape-gallery/forest-road.jpg" class="landscapephoto gallery1"></a>
-        <a href="#img30"><img src="landscape-gallery/boats-viaduct.jpg" class="portraitphoto gallery1"></a>
-        <a href="#_" class="lightbox" id="img31">
-            <img src="landscape-gallery/autumncastle.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img1">
-            <img src="landscape-gallery/cwm-idwal.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img2">
-            <img src="landscape-gallery/lonely-tree.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img3">
-            <img src="landscape-gallery/rainbow-york.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img4">
-            <img src="landscape-gallery/waterfall-york.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img5">
-            <img src="landscape-gallery/iss-park.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img6">
-            <img src="landscape-gallery/menai-bridge.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img7">
-            <img src="landscape-gallery/boat-house.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img8">
-            <img src="landscape-gallery/beach-houses.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img9">
-            <img src="landscape-gallery/millenium-bridge.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img10">
-            <img src="landscape-gallery/waves-crash.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img11">
-            <img src="landscape-gallery/fog-dog.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img12">
-            <img src="landscape-gallery/tryfan-clouds.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img13">
-            <img src="landscape-gallery/tryfan-stream.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img14">
-            <img src="landscape-gallery/wind-turbine.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img15">
-            <img src="landscape-gallery/mountain-range.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img17">
-            <img src="landscape-gallery/tree-fog.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img18">
-            <img src="landscape-gallery/viaduct-top.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img19">
-            <img src="landscape-gallery/pen-y-fan.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img20">
-            <img src="landscape-gallery/norway-rainbow.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img21">
-            <img src="landscape-gallery/pine-fog.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img22">
-            <img src="landscape-gallery/forest-rays.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img23">
-            <img src="landscape-gallery/brecon-trees.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img24">
-            <img src="landscape-gallery/fishing-boat.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img25">
-            <img src="landscape-gallery/derwent-water.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img26">
-            <img src="landscape-gallery/beach-waves.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img27">
-            <img src="landscape-gallery/newforest.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img28">
-            <img src="landscape-gallery/mountain-sunset.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img29">
-            <img src="landscape-gallery/forest-road.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img30">
-            <img src="landscape-gallery/boats-viaduct.jpg">
-        </a>
+    <!-- =========================
+         Gallery
+    ========================== -->
+
+    <main
+        class="gallery"
+        id="gallery"
+        data-gallery="landscape"
+    ></main>
+
+    <!-- =========================
+         Lightbox
+    ========================== -->
+
+    <div id="lightbox">
+
+        <button id="closeLightbox">
+            &times;
+        </button>
+
+        <button class="lightbox-nav prev" id="prevBtn">
+            &#10094;
+        </button>
+
+        <img id="lightbox-img">
+
+        <button class="lightbox-nav next" id="nextBtn">
+            &#10095;
+        </button>
+
+    </div>
+
+    <script src="gallery.js"></script>
+
 </body>
 
 </html>

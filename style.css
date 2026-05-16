@@ -58,6 +58,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+section {
+
+  padding-block: 6rem;
+}
+
 /* =========================
    Typography
 ========================= */
@@ -215,10 +220,17 @@ em {
 
   position: absolute;
 
-  top: calc(100% + 0.75rem);
+  top: 100%;
   left: 0;
 
   min-width: 220px;
+
+  padding-top: 0.75rem;
+
+  z-index: 1000;
+}
+
+.dropdown-content-inner {
 
   background: var(--card-bg);
 
@@ -230,8 +242,6 @@ em {
   padding: 0.5rem;
 
   box-shadow: var(--shadow);
-
-  z-index: 1000;
 }
 
 .dropdown-content a {
@@ -367,6 +377,71 @@ em {
   gap: 1.5rem;
 }
 
+.hero-section {
+
+  position: relative;
+
+  min-height: 90vh;
+
+  overflow: hidden;
+
+  display: grid;
+  place-items: center;
+
+  padding: 2rem;
+}
+
+.hero-background {
+
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  z-index: 0;
+
+  animation: slowZoom 18s ease-in-out infinite alternate;
+}
+
+.hero-section::after {
+
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.45),
+      rgba(0,0,0,0.65)
+    );
+
+  z-index: 1;
+}
+
+.hero-overlay {
+
+  position: relative;
+
+  z-index: 2;
+}
+
+@keyframes slowZoom {
+
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.06);
+  }
+
+}
+
 .hero-eyebrow {
 
   text-transform: uppercase;
@@ -387,6 +462,29 @@ em {
   color: var(--text);
 
   max-width: 50ch;
+}
+
+.featured-break {
+
+  width: 100%;
+
+  padding:
+    2rem 0 5rem;
+}
+
+.featured-break img {
+
+  width: min(100% - 2rem, 1400px);
+
+  height: 70vh;
+
+  object-fit: cover;
+
+  display: block;
+
+  margin-inline: auto;
+
+  border-radius: 1.5rem;
 }
 
 /* =========================
@@ -554,22 +652,31 @@ em {
 
   position: absolute;
 
-  bottom: 1.5rem;
-  left: 50%;
+  inset: 0;
 
-  transform: translateX(-50%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  padding: 2rem;
+
+  background:
+    linear-gradient(
+      transparent,
+      rgba(0,0,0,0.65)
+    );
+}
+
+.gallery-title span {
 
   color: white;
 
-  font-size: 1.4rem;
+  font-size: 2rem;
 
   font-family:
     "Cormorant Garamond", serif;
 
-  letter-spacing: 0.04em;
-
-  text-shadow:
-    0 4px 10px rgba(0,0,0,0.6);
+  letter-spacing: 0.05em;
 }
 
 /* =========================
@@ -700,4 +807,20 @@ hr.style-seven {
     gap: 1.5rem;
   }
 
+}
+
+/* =========================
+   Site Footer
+========================= */
+
+
+.site-footer {
+
+  padding:
+    3rem 2rem;
+
+  border-top:
+    1px solid var(--border);
+
+  text-align: center;
 }

@@ -2,121 +2,95 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" type="text/css" href="style-gallery.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="icon" type="image/x-icon" href="gallery1/favicon.png">
-    <script src="script.js"></script>
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JJ Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-gallery.css">
+    <link rel="icon" type="image/x-icon" href="gallery1/favicon.png">
+    <title>Joe Jenkinson Photography</title>
 </head>
 
-<body id="bootstrap-override" oncontextmenu="return false;">
+<body>
+
+    <!-- =========================
+         Navigation
+    ========================== -->
+
     <div class="website-logo">
-        <img src="gallery1/joe-light_2k.png" class="joejenkinsonlogo">
-        </a>
+        <img class="joejenkinsonlogo"
+             src="gallery1/joe-light_2k.png"
+             alt="Joe Jenkinson Photography logo">
     </div>
 
     <div class="topnav" id="myTopnav">
+
         <a href="index.html" class="active">Home</a>
+
         <div class="dropdown">
-          <button class="dropbtn">Portfolio
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="landscape.html">- Landscape</a>
-            <a href="animals.html">- Wildlife</a>
-            <a href="pano.html">- Pano</a>
-            <a href="drone.html">- Drone</a>
-          </div>
-        </div>
-        <a href="https://www.etsy.com/uk/shop/JoeJPhotography">Prints</a>
-        <a href="aboutme.html">About</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-      </div>
+            <button class="dropbtn">
+                Galleries
+                <i class="fa fa-caret-down"></i>
+            </button>
+
+            <div class="dropdown-content">
+
+                <div class="dropdown-content-inner">
             
-            <!-- <a class="nav-link" href="contact.html">Contact</a> -->
+                    <a href="landscape.html">Landscapes</a>
+                    <a href="animals.html">Wildlife</a>
+                    <a href="pano.html">Panoramic</a>
+                    <a href="drone.html">Drone</a>
+            
+                </div>
+            
+            </div>
         </div>
-    </div>
+
+        <a href="prints.html">Prints</a>
+        <a href="aboutme.html">About</a>
+        <a href="contact.html">Contact</a>
+
+        <a href="javascript:void(0);"
+           class="icon"
+           onclick="myFunction()">&#9776;</a>
 
     </div>
-    <div class="container">
-        <a href="#img1"><img src="animals-gallery/puffin-flight.jpg" class="landscapephoto gallery1"></a>
-        <a href="#img2"><img src="animals-gallery/fox-snow.jpg" class="portraitphoto gallery1"></a>
-        <a href="#img3"><img src="animals-gallery/deer-moon.jpg" class="squarephoto gallery1"></a>
-        <a href="#img4"><img src="animals-gallery/otter.jpg" class="landscapephoto gallery1"></a>
-        <a href="#img5"><img src="animals-gallery/owl-black.jpg" class="landscapephoto gallery1"></a>
-        <a href="#img6"><img src="animals-gallery/owl-white.jpg" class="landscapephoto gallery1"></a>
-        <a href="#img7"><img src="animals-gallery/puffin-solo.jpg" class="landscapephoto gallery1"></a>
-        <a href="#img8"><img src="animals-gallery/heron.jpg" class="portraitphoto gallery1"></a>
-        <!-- <a href="#img7"><img src="animals-gallery/K0A0590.jpg" class="portraitphoto gallery1"></a>
-        <a href="#img5"><img src="animals-gallery/K0A0575.jpg" class="landscapephoto gallery1"></a>
-        <a href="#img6"><img src="animals-gallery/K0A0588.jpg" class="landscapephoto gallery1"></a>
-        <a href="#img8"><img src="animals-gallery/K0A4863.jpg" class="portraitphoto gallery1"></a>
-        <a href="#img9"><img src="animals-gallery/K0A5325.jpg" class="landscapephoto gallery1"></a>
-        <a href="#img10"><img src="animals-gallery/K0A6161.jpg" class="portraitphoto gallery1"></a>
-        <a href="#img11"><img src="animals-gallery/K0A6596.jpg" class="landscapephoto gallery1"></a>
-        <a href="#img12"><img src="animals-gallery/K0A6642.jpg" class="landscapephoto gallery1"></a>
-        <a href="#img13"><img src="animals-gallery/K0A7561.jpg" class="landscapephoto gallery1"></a>
-        <a href="#img14"><img src="animals-gallery/K0A7620.jpg" class="landscapephoto gallery1"></a> -->
-        <a href="#_" class="lightbox" id="img1">
-            <img src="animals-gallery/puffin-flight.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img2">
-            <img src="animals-gallery/fox-snow.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img3">
-            <img src="animals-gallery/deer-moon.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img4">
-            <img src="animals-gallery/otter.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img5">
-            <img src="animals-gallery/owl-black.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img6">
-            <img src="animals-gallery/owl-white.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img7">
-            <img src="animals-gallery/puffin-solo.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img8">
-            <img src="animals-gallery/heron.jpg">
-        <!-- </a>
-        <a href="#_" class="lightbox" id="img9">
-            <img src="animals-gallery/K0A5325.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img10">
-            <img src="animals-gallery/K0A6161.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img11">
-            <img src="animals-gallery/K0A6596.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img12">
-            <img src="animals-gallery/K0A6642.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img13">
-            <img src="animals-gallery/K0A7561.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img14">
-            <img src="animals-gallery/K0A7620.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img15">
-            <img src="animals-gallery/K0A9667.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img16">
-            <img src="animals-gallery/K0A0935.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img17">
-            <img src="animals-gallery/K0A0974.jpg">
-        </a>
-        <a href="#_" class="lightbox" id="img18">
-            <img src="animals-gallery/K0A1532.jpg">
-        </a> -->
+
+    <!-- =========================
+         Gallery
+    ========================== -->
+
+    <main
+        class="gallery"
+        id="gallery"
+        data-gallery="animals"
+    ></main>
+
+    <!-- =========================
+         Lightbox
+    ========================== -->
+
+    <div id="lightbox">
+
+        <button id="closeLightbox">
+            &times;
+        </button>
+
+        <button class="lightbox-nav prev" id="prevBtn">
+            &#10094;
+        </button>
+
+        <img id="lightbox-img" alt="">
+
+        <button class="lightbox-nav next" id="nextBtn">
+            &#10095;
+        </button>
+
+    </div>
+
+    <script src="gallery.js"></script>
+
 </body>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </html>

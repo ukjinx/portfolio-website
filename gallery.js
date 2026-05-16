@@ -46,11 +46,9 @@ function buildGallery() {
 
     images.forEach((image, index) => {
 
-        const item =
-            document.createElement("div");
+        const item = document.createElement("div");
 
-        item.className =
-            `gallery-item ${image.type}`;
+        item.className = "gallery-item";
 
         item.innerHTML = `
             <img
@@ -148,28 +146,17 @@ function showPrev() {
    Events
 ========================= */
 
-function attachGalleryEvents() {
+gallery.addEventListener("click", e => {
 
-    document
-        .querySelectorAll(".gallery img")
-        .forEach(image => {
+    const image = e.target.closest("img");
 
-            image.addEventListener(
-                "click",
-                () => {
+    if (!image) return;
 
-                    openLightbox(
-                        parseInt(
-                            image.dataset.index
-                        )
-                    );
+    openLightbox(
+        parseInt(image.dataset.index)
+    );
 
-                }
-            );
-
-        });
-
-}
+});
 
 closeBtn.addEventListener(
     "click",
