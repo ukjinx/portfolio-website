@@ -11,85 +11,221 @@
 </head>
 
 <body>
-    <div class="website-logo">
-        <img class="joejenkinsonlogo" src="gallery1/joe-light_2k.png" alt="logo">
-    </div>
 
+    <!-- =========================
+         Navigation
+    ========================== -->
+
+    <div class="website-logo">
+        <img class="joejenkinsonlogo"
+             src="gallery1/joe-light_2k.png"
+             alt="Joe Jenkinson Photography logo">
+    </div>
 
     <div class="topnav" id="myTopnav">
+
         <a href="index.html" class="active">Home</a>
+
         <div class="dropdown">
-          <button class="dropbtn">Portfolio
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="landscape.html">Landscape</a>
-            <a href="animals.html">Wildlife</a>
-            <a href="pano.html">Pano</a>
-            <a href="drone.html">Drone</a>
-          </div>
+            <button class="dropbtn">
+                Galleries
+                <i class="fa fa-caret-down"></i>
+            </button>
+
+            <div class="dropdown-content">
+                <a href="landscape.html">Landscapes</a>
+                <a href="animals.html">Wildlife</a>
+                <a href="pano.html">Panoramic</a>
+                <a href="drone.html">Drone</a>
+            </div>
         </div>
-        <a href="https://www.etsy.com/uk/shop/JoeJPhotography">Prints</a>
+
+        <a href="prints.html">Prints</a>
         <a href="aboutme.html">About</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-      </div>
+        <a href="contact.html">Contact</a>
 
+        <a href="javascript:void(0);"
+           class="icon"
+           onclick="myFunction()">&#9776;</a>
 
-
-    <div class="welcomeMessage">
-    <p>
-        Hello! I’m Joe Jenkinson, a landscape and wildlife photographer based in South Wales photographing since 2008. 
-        <br><br>My work captures the beauty of the UK and beyond, telling stories through images of diverse landscapes and wildlife.
-        <br><br>Explore my galleries and join me on this visual journey—I hope you find inspiration in the moments I’ve captured.
-        <br><br>Thanks for visiting!
-    </p>
     </div>
 
-    <!-- <p>My name is Joe Jenkinson, I am a <em>Landscape</em> and <em>Wildlife</em> photographer based in South Wales.</p>
+    <!-- =========================
+         Hero Section
+    ========================== -->
 
-    <p>Please click on the images below to view my portfolio images.</p> -->
-    <div class="empty-space">
-        <!-- Empty Div for spacing -->
-    </div>
+    <section class="hero-section">
 
-    
-    <!-- <div id="top-portfolio">
-        <div class="pano-container">
-        <a href="pano.html">
-            <img class="pano-cover portfolio-border" src="gallery1/pano-gallery.jpg" alt="Pano Gallery">
-            <div class="centered">Pano</div>
-        </a>
-    </div>
-</div> -->
+        <div class="hero-overlay">
 
-    <div id="portfolio-thumbnails">
+            <p class="hero-eyebrow">
+                Fine Art Nature Photography
+            </p>
 
-        <div class="landscape-container">
-        <a href="landscape.html">
-            <img class="portfolio-cover portfolio-border" src="gallery1/landscape-gallery.jpg" alt="Landscape Gallery">
-            <div class="centered">Landscape</div>
-        </a>
+            <h1>
+                Wildlife, Landscapes & The Natural World
+            </h1>
+
+            <p class="hero-subtitle">
+                Atmospheric photography inspired by wild places,
+                changing light, and quiet moments in nature.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#portfolio-thumbnails"
+                   class="hero-btn primary-btn">
+                   View Galleries
+                </a>
+
+                <a href="prints.html"
+                   class="hero-btn secondary-btn">
+                   Print Information
+                </a>
+
+            </div>
+
         </div>
-        <div class="animals-container">
-        <a href="animals.html">
-            <img class="portfolio-cover portfolio-border" src="gallery1/wildlife-gallery.jpg" alt="Wildlife Gallery">
-            <div class="centered">Wildlife</div>
-        </a>
+
+    </section>
+
+    <!-- =========================
+         About Preview
+    ========================== -->
+
+    <section class="intro-section">
+
+        <div class="intro-content">
+
+            <p>
+                Hello — I’m Joe Jenkinson, a landscape and wildlife
+                photographer based in South Wales.
+            </p>
+
+            <p>
+                Through photography, I aim to capture the atmosphere,
+                scale, and emotion of the natural world —
+                from dramatic mountain light to intimate wildlife encounters.
+            </p>
+
+            <p>
+                My work is available as fine art prints,
+                designed to bring a sense of nature into your home.
+            </p>
+
         </div>
-        <div class="pano-container">
-            <a href="pano.html">
-                <img class="portfolio-cover portfolio-border" src="gallery1/pano-gallery.jpg" alt="Pano Gallery">
-            <div class="centered">Pano</div>
-        </a>
-    </div>
-    <div class="drone-container">
-        <a href="drone.html">
-            <img class="portfolio-cover portfolio-border" src="gallery1/drone-gallery.jpg" alt="Drone Gallery">
-            <div class="centered">Drone</div>
-        </a>
-    </div>
-    </div>
-</div>
+
+    </section>
+
+    <!-- =========================
+         Gallery Grid
+    ========================== -->
+
+    <section id="portfolio-thumbnails">
+
+        <div class="gallery-heading">
+
+            <p class="section-eyebrow">
+                Explore The Galleries
+            </p>
+
+            <h2>
+                A Collection of Nature Photography
+            </h2>
+
+        </div>
+
+        <div class="gallery-grid">
+
+            <div class="gallery-card">
+                <a href="landscape.html">
+
+                    <img class="portfolio-cover portfolio-border"
+                         src="gallery1/landscape-gallery.jpg"
+                         alt="Landscape Gallery">
+
+                    <div class="gallery-title">
+                        Landscapes
+                    </div>
+
+                </a>
+            </div>
+
+            <div class="gallery-card">
+                <a href="animals.html">
+
+                    <img class="portfolio-cover portfolio-border"
+                         src="gallery1/wildlife-gallery.jpg"
+                         alt="Wildlife Gallery">
+
+                    <div class="gallery-title">
+                        Wildlife
+                    </div>
+
+                </a>
+            </div>
+
+            <div class="gallery-card">
+                <a href="pano.html">
+
+                    <img class="portfolio-cover portfolio-border"
+                         src="gallery1/pano-gallery.jpg"
+                         alt="Panoramic Gallery">
+
+                    <div class="gallery-title">
+                        Panoramic
+                    </div>
+
+                </a>
+            </div>
+
+            <div class="gallery-card">
+                <a href="drone.html">
+
+                    <img class="portfolio-cover portfolio-border"
+                         src="gallery1/drone-gallery.jpg"
+                         alt="Drone Gallery">
+
+                    <div class="gallery-title">
+                        Drone
+                    </div>
+
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+         Prints Preview
+    ========================== -->
+
+    <section class="prints-preview">
+
+        <div class="prints-content">
+
+            <p class="section-eyebrow">
+                Fine Art Prints
+            </p>
+
+            <h2>
+                Photography Created For Your Walls
+            </h2>
+
+            <p>
+                Selected images are available as premium-quality
+                fine art prints in a range of sizes and finishes.
+            </p>
+
+            <a href="prints.html"
+               class="hero-btn primary-btn">
+               Learn More
+            </a>
+
+        </div>
+
+    </section>
 
 </body>
 <script src="script.js"></script>
