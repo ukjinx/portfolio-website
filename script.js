@@ -1,222 +1,23 @@
-/* =========================
-   Gallery Loader
-========================= */
+const sections =
+  document.querySelectorAll(".about-section");
 
-const gallery = document.getElementById("gallery");
+const observer =
+  new IntersectionObserver(entries => {
 
-const galleryName =
-    gallery.dataset.gallery;
+    entries.forEach(entry => {
 
-let images = [];
+      if (entry.isIntersecting) {
 
-let currentIndex = 0;
+        entry.target.classList.add("visible");
 
-/* =========================
-   Load JSON
-========================= */
-
-async function loadGallery() {
-
-    try {
-
-        const response = await fetch(
-            `data/${galleryName}.json`
-        );
-
-        images = await response.json();
-
-        buildGallery();
-
-    } catch (error) {
-
-        console.error(
-            "Failed to load gallery:",
-            error
-        );
-
-    }
-
-}
-
-/* =========================
-   Build Gallery
-========================= */
-
-function buildGallery() {
-
-    images.forEach((image, index) => {
-
-        const item =
-            document.createElement("div");
-
-        item.className =
-            `gallery-item ${image.type}`;
-
-        item.innerHTML = `
-            <img
-                src="${image.src}"
-                alt="${image.alt}"
-                loading="lazy"
-                data-index="${index}"
-            >
-        `;
-
-        gallery.appendChild(item);
+      }
 
     });
 
-    attachGalleryEvents();
+  }, {
+    threshold: 0.15
+  });
 
-}
-
-/* =========================
-   Lightbox
-========================= */
-
-const lightbox =
-    document.getElementById("lightbox");
-
-const lightboxImg =
-    document.getElementById("lightbox-img");
-
-const closeBtn =
-    document.getElementById("closeLightbox");
-
-const prevBtn =
-    document.getElementById("prevBtn");
-
-const nextBtn =
-    document.getElementById("nextBtn");
-
-/* =========================
-   Open
-========================= */
-
-function openLightbox(index) {
-
-    currentIndex = index;
-
-    lightboxImg.src =
-        images[index].src;
-
-    lightbox.classList.add("active");
-
-    document.body.style.overflow =
-        "hidden";
-
-}
-
-/* =========================
-   Close
-========================= */
-
-function closeLightbox() {
-
-    lightbox.classList.remove("active");
-
-    document.body.style.overflow = "";
-
-}
-
-/* =========================
-   Next / Prev
-========================= */
-
-function showNext() {
-
-    currentIndex =
-        (currentIndex + 1)
-        % images.length;
-
-    lightboxImg.src =
-        images[currentIndex].src;
-
-}
-
-function showPrev() {
-
-    currentIndex =
-        (currentIndex - 1 + images.length)
-        % images.length;
-
-    lightboxImg.src =
-        images[currentIndex].src;
-
-}
-
-/* =========================
-   Events
-========================= */
-
-function attachGalleryEvents() {
-
-    document
-        .querySelectorAll(".gallery img")
-        .forEach(image => {
-
-            image.addEventListener(
-                "click",
-                () => {
-
-                    openLightbox(
-                        parseInt(
-                            image.dataset.index
-                        )
-                    );
-
-                }
-            );
-
-        });
-
-}
-
-closeBtn.addEventListener(
-    "click",
-    closeLightbox
-);
-
-nextBtn.addEventListener(
-    "click",
-    showNext
-);
-
-prevBtn.addEventListener(
-    "click",
-    showPrev
-);
-
-/* =========================
-   Keyboard
-========================= */
-
-document.addEventListener(
-    "keydown",
-    e => {
-
-        if (
-            !lightbox.classList.contains(
-                "active"
-            )
-        ) return;
-
-        if (e.key === "Escape") {
-            closeLightbox();
-        }
-
-        if (e.key === "ArrowRight") {
-            showNext();
-        }
-
-        if (e.key === "ArrowLeft") {
-            showPrev();
-        }
-
-    }
-);
-
-/* =========================
-   Init
-========================= */
-
-loadGallery();
+sections.forEach(section => {
+  observer.observe(section);
+});
