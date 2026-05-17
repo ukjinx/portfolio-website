@@ -1,41 +1,131 @@
 [
     {
-        "src": "landscape-gallery/autumncastle.jpg",
+        "src": "landscape-gallery/beddgelertforest.jpg",
         "alt": "Castle Coch"
     },
 
     {
-        "src": "landscape-gallery/boat-house.jpg",
+        "src": "landscape-gallery/boathouse.jpg",
         "alt": "Castle Coch"
     },
 
     {
-        "src": "landscape-gallery/brecon-trees.jpg",
+        "src": "landscape-gallery/bwturbine.jpg",
         "alt": "Castle Coch"
     },
 
     {
-        "src": "landscape-gallery/cwm-idwal.jpg",
+        "src": "landscape-gallery/castlecoch.jpg",
         "alt": "Castle Coch"
     },
 
     {
-        "src": "landscape-gallery/iss-park.jpg",
+        "src": "landscape-gallery/cwmidwal.jpg",
         "alt": "Castle Coch"
     },
 
     {
-        "src": "landscape-gallery/lonely-tree.jpg",
+        "src": "landscape-gallery/derwentwater.jpg",
         "alt": "Castle Coch"
     },
 
     {
-        "src": "landscape-gallery/menai-bridge.jpg",
+        "src": "landscape-gallery/fishingboat.jpg",
         "alt": "Castle Coch"
     },
 
     {
-        "src": "landscape-gallery/mountain-range.jpg",
+        "src": "landscape-gallery/fjord.jpg",
+        "alt": "Castle Coch"
+    },
+
+    {
+        "src": "landscape-gallery/forestofdean.jpg",
+        "alt": "Castle Coch"
+    },
+
+    {
+        "src": "landscape-gallery/glanllynstars.jpg",
+        "alt": "Castle Coch"
+    },
+
+    {
+        "src": "landscape-gallery/lightrays.jpg",
+        "alt": "Castle Coch"
+    },
+
+    {
+        "src": "landscape-gallery/lonelytree.jpg",
+        "alt": "Castle Coch"
+    },
+
+    {
+        "src": "landscape-gallery/menaibridge.jpg",
+        "alt": "Castle Coch"
+    },
+
+    {
+        "src": "landscape-gallery/mountainrange.jpg",
+        "alt": "Castle Coch"
+    },
+
+    {
+        "src": "landscape-gallery/mountainsunset.jpg",
+        "alt": "Castle Coch"
+    },
+
+    {
+        "src": "landscape-gallery/norwayfjord.jpg",
+        "alt": "Castle Coch"
+    },
+
+    {
+        "src": "landscape-gallery/ogwenvalley.jpg",
+        "alt": "Castle Coch"
+    },
+
+    {
+        "src": "landscape-gallery/penyfansunset.jpg",
+        "alt": "Castle Coch"
+    },
+
+    {
+        "src": "landscape-gallery/pinetrees.jpg",
+        "alt": "Castle Coch"
+    },
+
+    {
+        "src": "landscape-gallery/roadtosnowdon.jpg",
+        "alt": "Castle Coch"
+    },
+
+    {
+        "src": "landscape-gallery/snowdonhorseshoe.jpg",
+        "alt": "Castle Coch"
+    },
+
+    {
+        "src": "landscape-gallery/stpauls.jpg",
+        "alt": "Castle Coch"
+    },
+
+    {
+        "src": "landscape-gallery/sunsetfields.jpg",
+        "alt": "Castle Coch"
+    },
+
+    {
+        "src": "landscape-gallery/trollroad.jpg",
+        "alt": "Castle Coch"
+    },
+
+    {
+        "src": "landscape-gallery/tryfanclouds.jpg",
+        "alt": "Castle Coch"
+    },
+
+    {
+        "src": "landscape-gallery/tryfanstream.jpg",
         "alt": "Castle Coch"
     }
 ]

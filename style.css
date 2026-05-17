@@ -128,20 +128,27 @@ em {
 
 .website-logo {
 
+  width: 100%;
+
   display: flex;
+
   justify-content: center;
+
+  align-items: center;
 
   padding:
     2rem 1rem 1rem;
-  
-  position: relative;
-  z-index: 1000;
+
 }
 
 .joejenkinsonlogo {
 
+  display: block;
+
   width: min(420px, 70vw);
+
   height: auto;
+
 }
 
 /* =========================
@@ -207,6 +214,10 @@ em {
 
 .active {
   color: white;
+}
+
+#nav-placeholder {
+  width: 100%;
 }
 
 /* =========================
@@ -1253,6 +1264,127 @@ hr.style-seven {
       rgba(255,255,255,0.04),
       rgba(255,255,255,0.01)
     );
+
+}
+
+/* =========================
+   Pricing Section
+========================= */
+
+.pricing-section {
+
+  padding:
+    clamp(5rem, 8vw, 8rem)
+    2rem;
+
+}
+
+.section-heading {
+
+  text-align: center;
+
+  margin-bottom: 4rem;
+
+}
+
+.section-intro {
+
+  max-width: 60ch;
+
+  margin-inline: auto;
+
+}
+
+.pricing-grid {
+
+  width:
+    min(100%, 1100px);
+
+  margin-inline: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(320px, 1fr));
+
+  gap: 2rem;
+
+}
+
+.pricing-card {
+
+  background: var(--card-bg);
+
+  border:
+    1px solid var(--border);
+
+  border-radius: var(--radius);
+
+  padding: 2.5rem;
+
+  box-shadow: var(--shadow);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+
+}
+
+.pricing-card:hover {
+
+  transform: translateY(-4px);
+
+  border-color:
+    rgba(255,255,255,0.14);
+
+}
+
+.featured-pricing {
+
+  border-color:
+    rgba(143,158,139,0.35);
+
+}
+
+.pricing-card h3 {
+
+  margin-bottom: 2rem;
+
+}
+
+.price-item {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding:
+    1rem 0;
+
+  border-bottom:
+    1px solid var(--border);
+
+  color: var(--text-muted);
+
+}
+
+.price-item strong {
+
+  color: var(--text);
+
+  font-size: 1.1rem;
+
+}
+
+.pricing-note {
+
+  margin-top: 2rem;
+
+  font-size: 0.95rem;
+
+  line-height: 1.8;
 
 }
 
