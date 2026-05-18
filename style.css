@@ -216,9 +216,7 @@ em {
   color: white;
 }
 
-#nav-placeholder {
-  width: 100%;
-}
+
 
 /* =========================
    Dropdown
@@ -730,22 +728,6 @@ em {
   padding: 1rem;
 }
 
-.about-section-inner {
-
-  width: min(100%, 900px);
-
-  margin-inline: auto;
-
-}
-
-.about-section p {
-
-  text-align: left;
-
-  margin-inline: auto;
-
-}
-
 .article-container {
 
   display: grid;
@@ -864,50 +846,51 @@ hr.style-seven {
 /* =========================
    About Section
 ========================= */
-.about-hero h1 {
-  font-size: clamp(3rem, 7vw, 5rem);
-}
 
-.about-hero::after {
-  z-index: 1;
+.about-section-inner {
+
+  width: min(100%, 1100px);
+
+  margin-inline: auto;
+
+  padding-inline: 2rem;
+
 }
 
 .about-section h2 {
+
   font-size: clamp(2rem, 4vw, 3rem);
-  margin-bottom: 1rem;
+
+  margin-bottom: 2rem;
+
+  text-align: center;
+
 }
 
 .about-section p {
 
-  text-align: left;
-
-  margin-inline: 0;
-
   max-width: 62ch;
 
+  margin-left: auto;
+  margin-right: auto;
+
+  margin-bottom: 1.5rem;
+
+  text-align: left;
+
+  padding-left: 2rem;
+
+  border-left:
+    1px solid rgba(255,255,255,0.08);
+
 }
+
+/* Alternate subtle section background */
 
 .about-section:nth-child(even) {
-  background: rgba(255,255,255,0.02);
-}
 
-.about-section {
-  opacity: 0;
-  transform: translateY(30px);
-  padding-block: 5rem;
-
-  padding:
-    clamp(4rem, 8vw, 8rem)
-    2rem;
-
-}
-
-.about-section-inner {
-
-  width:
-    min(100%, 1200px);
-
-  margin-inline: auto;
+  background:
+    rgba(255,255,255,0.02);
 
 }
 
@@ -991,6 +974,19 @@ hr.style-seven {
 
   padding:
     6rem 2rem;
+
+}
+
+@media screen and (max-width: 768px) {
+
+  .about-section p {
+
+    padding-left: 1rem;
+
+    border-left:
+      1px solid rgba(255,255,255,0.06);
+
+  }
 
 }
 
