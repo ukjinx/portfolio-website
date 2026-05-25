@@ -673,3 +673,141 @@
     }
 
 }
+
+/* =========================
+   Selection Tray
+========================= */
+
+#selectionTray {
+
+    position: fixed;
+
+    right: 24px;
+    bottom: 24px;
+
+    z-index: 9999;
+
+    padding:
+        14px 22px;
+
+    border: none;
+
+    border-radius: 999px;
+
+    background:
+        rgba(20,20,20,0.82);
+
+    backdrop-filter: blur(18px);
+
+    color: white;
+
+    font-size: 0.95rem;
+
+    cursor: pointer;
+
+    border:
+        1px solid rgba(255,255,255,0.08);
+
+    box-shadow:
+        0 10px 40px rgba(0,0,0,0.25);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+
+}
+
+#selectionTray:hover {
+
+    transform: translateY(-2px);
+
+    background:
+        rgba(30,30,30,0.92);
+
+}
+
+/* =========================
+   Selected Prints List
+========================= */
+
+#selectedPrints {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+    margin:
+        24px 0;
+
+}
+
+.selected-print {
+
+    display: flex;
+
+    gap: 16px;
+
+    padding: 14px;
+
+    border-radius: 18px;
+
+    background:
+        rgba(255,255,255,0.04);
+
+    border:
+        1px solid rgba(255,255,255,0.06);
+
+}
+
+.selected-print img {
+
+    width: 90px;
+    height: 90px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+}
+
+.selected-print-info {
+
+    flex: 1;
+
+}
+
+.selected-print-info h3 {
+
+    font-size: 1rem;
+
+    margin-bottom: 10px;
+
+}
+
+.selected-print-info p {
+
+    font-size: 0.9rem;
+
+    opacity: 0.75;
+
+    margin-bottom: 6px;
+
+}
+
+.remove-print {
+
+    margin-top: 10px;
+
+    border: none;
+
+    background: none;
+
+    color: #ffb3b3;
+
+    cursor: pointer;
+
+    padding: 0;
+
+}

@@ -12,6 +12,8 @@ let images = [];
 
 let currentIndex = 0;
 
+let selectedPrints = [];
+
 /* =========================
    Load JSON
 ========================= */
@@ -103,17 +105,24 @@ const nextBtn =
 const printModal =
     document.getElementById("printModal");
 
-const openPrintModalBtn =
-    document.getElementById("openPrintModal");
+const selectionTray =
+    document.getElementById("selectionTray");
+
+const selectionCount =
+    document.getElementById("selectionCount");
+
+const selectedPrintsContainer =
+    document.getElementById("selectedPrints");
+
+const addToSelectionBtn =
+    document.getElementById(
+        "addToSelectionBtn"
+    );
 
 const closePrintModalBtn =
-    document.getElementById("closePrintModal");
-
-const printPreview =
-    document.getElementById("printPreview");
-
-const printSize =
-    document.getElementById("printSize");
+    document.getElementById(
+        "closePrintModal"
+    );
 
 /* =========================
    Open Lightbox
@@ -185,44 +194,162 @@ function showPrev() {
 }
 
 /* =========================
+   Add Print Selection
+========================= */
+
+function addCurrentPrint() {
+
+    const image =
+        images[currentIndex];
+
+    const selection = {
+
+        title:
+            image.title,
+
+        src:
+            image.src,
+
+        size:
+            image.sizes[0],
+
+        finish:
+            "Fine Art Matte",
+
+        frame:
+            "Unframed"
+
+    };
+
+    selectedPrints.push(
+        selection
+    );
+
+    updateSelectionTray();
+
+}
+
+/* =========================
+   Update Selection Tray
+========================= */
+
+function updateSelectionTray() {
+
+    selectionCount.textContent =
+        selectedPrints.length;
+
+}
+
+/* =========================
+   Render Selected Prints
+========================= */
+
+function renderSelectedPrints() {
+
+    selectedPrintsContainer.innerHTML =
+        "";
+
+    selectedPrints.forEach(
+        (print, index) => {
+
+            const item =
+                document.createElement(
+                    "div"
+                );
+
+            item.className =
+                "selected-print";
+
+            item.innerHTML = `
+                <img src="${print.src}">
+
+                <div class="selected-print-info">
+
+                    <h3>
+                        ${print.title}
+                    </h3>
+
+                    <p>
+                        Size:
+                        ${print.size}
+                    </p>
+
+                    <p>
+                        Finish:
+                        ${print.finish}
+                    </p>
+
+                    <p>
+                        Frame:
+                        ${print.frame}
+                    </p>
+
+                    <button
+                        class="remove-print"
+                        data-index="${index}"
+                    >
+                        Remove
+                    </button>
+
+                </div>
+            `;
+
+            selectedPrintsContainer.appendChild(
+                item
+            );
+
+        }
+    );
+
+}
+
+/* =========================
    Open Print Modal
 ========================= */
 
 function openPrintModal() {
 
-    const image =
-        images[currentIndex];
-
-    printPreview.src =
-        image.src;
-
-    printSize.innerHTML =
-        `
-        <option value="">
-            Select Size
-        </option>
-        `;
-
-    image.sizes.forEach(size => {
-
-        const option =
-            document.createElement(
-                "option"
-            );
-
-        option.value = size;
-
-        option.textContent = size;
-
-        printSize.appendChild(option);
-
-    });
+    renderSelectedPrints();
 
     printModal.classList.add(
         "active"
     );
 
 }
+
+/* =========================
+   Remove Print
+========================= */
+
+selectedPrintsContainer.addEventListener(
+    "click",
+    e => {
+
+        if (
+            e.target.classList.contains(
+                "remove-print"
+            )
+        ) {
+
+            const index =
+                parseInt(
+                    e.target.dataset.index
+                );
+
+            selectedPrints.splice(
+                index,
+                1
+            );
+
+            renderSelectedPrints();
+
+            updateSelectionTray();
+
+        }
+
+    }
+);
+
 
 /* =========================
    Close Print Modal
@@ -273,7 +400,12 @@ prevBtn.addEventListener(
     showPrev
 );
 
-openPrintModalBtn.addEventListener(
+addToSelectionBtn.addEventListener(
+    "click",
+    addCurrentPrint
+);
+
+selectionTray.addEventListener(
     "click",
     openPrintModal
 );
@@ -332,45 +464,39 @@ printForm.addEventListener(
 
         e.preventDefault();
 
-        const image =
-            images[currentIndex];
+        const selections =
+    selectedPrints.map(print => {
 
-        const templateParams = {
+        return `
+Image: ${print.title}
+Size: ${print.size}
+Finish: ${print.finish}
+Frame: ${print.frame}
+`;
 
-            image_title:
-                image.title,
+    }).join("\n----------------\n");
 
-            print_size:
-                document.getElementById(
-                    "printSize"
-                ).value,
+const templateParams = {
 
-            print_finish:
-                document.getElementById(
-                    "printFinish"
-                ).value,
+    selections:
+        selections,
 
-            print_frame:
-                document.getElementById(
-                    "printFrame"
-                ).value,
+    customer_name:
+        document.getElementById(
+            "customerName"
+        ).value,
 
-            customer_name:
-                document.getElementById(
-                    "customerName"
-                ).value,
+    customer_email:
+        document.getElementById(
+            "customerEmail"
+        ).value,
 
-            customer_email:
-                document.getElementById(
-                    "customerEmail"
-                ).value,
+    notes:
+        document.getElementById(
+            "customerNotes"
+        ).value
 
-            notes:
-                document.getElementById(
-                    "customerNotes"
-                ).value
-
-        };
+};
 
         emailjs.send(
             "service_dvg53gr",

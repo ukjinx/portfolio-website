@@ -65,13 +65,24 @@
 
         </div>
 
-        <button id="openPrintModal">
-            Collect This Print
+        <button id="addToSelectionBtn">
+            Add To Print Selection
         </button>
 
     </div>
 
 </div>
+
+<!-- =========================
+     Print Selection Tray
+========================== -->
+
+<button id="selectionTray">
+
+    Selected Prints
+    (<span id="selectionCount">0</span>)
+
+</button>
 
 <!-- =========================
      Print Modal
@@ -84,88 +95,40 @@
         <button id="closePrintModal">
             &times;
         </button>
-
+    
         <h2>
-            Print Enquiry
+            Print Selection
         </h2>
-
-        <img
-            id="printPreview"
-            src=""
-            alt=""
-        >
-
+    
+        <div id="selectedPrints"></div>
+    
         <form id="printForm">
-
-            <select id="printSize" required>
-        
-                <option value="">
-                    Select Size
-                </option>
-        
-            </select>
-        
-            <select id="printFinish">
-        
-                <option>
-                    Fine Art Matte
-                </option>
-        
-                <option>
-                    Lustre
-                </option>
-        
-                <option>
-                    Canvas
-                </option>
-        
-            </select>
-        
-            <select id="printFrame">
-        
-                <option>
-                    Unframed
-                </option>
-        
-                <option>
-                    Black Frame
-                </option>
-        
-                <option>
-                    White Frame
-                </option>
-        
-                <option>
-                    Oak Frame
-                </option>
-        
-            </select>
-        
+    
             <input
                 id="customerName"
                 type="text"
                 placeholder="Your Name"
                 required
             >
-        
+    
             <input
                 id="customerEmail"
                 type="email"
                 placeholder="Your Email"
                 required
             >
-        
+    
             <textarea
                 id="customerNotes"
                 placeholder="Additional notes"
             ></textarea>
-        
+    
             <button type="submit">
                 Submit Print Enquiry
             </button>
-        
+    
         </form>
-
+    
     </div>
 
 </div>
