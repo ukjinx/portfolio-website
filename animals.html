@@ -30,26 +30,145 @@
     ></main>
 
     <!-- =========================
-         Lightbox
+     Lightbox
     ========================== -->
 
-    <div id="lightbox">
+<div id="lightbox">
 
-        <button id="closeLightbox">
-            &times;
-        </button>
+    <button id="closeLightbox">
+        &times;
+    </button>
 
-        <button class="lightbox-nav prev" id="prevBtn">
-            &#10094;
-        </button>
+    <button class="lightbox-nav prev" id="prevBtn">
+        &#10094;
+    </button>
 
-        <img id="lightbox-img" alt="">
+    <img id="lightbox-img" alt="">
 
-        <button class="lightbox-nav next" id="nextBtn">
-            &#10095;
+    <button class="lightbox-nav next" id="nextBtn">
+        &#10095;
+    </button>
+
+    <!-- =========================
+         Lightbox Info
+    ========================== -->
+
+    <div class="lightbox-info">
+
+        <div class="lightbox-meta">
+
+            <h2 id="lightbox-title"></h2>
+
+            <p id="lightbox-location"></p>
+
+            <p id="lightbox-description"></p>
+
+        </div>
+
+        <button id="openPrintModal">
+            Collect This Print
         </button>
 
     </div>
+
+</div>
+
+<!-- =========================
+     Print Modal
+========================== -->
+
+<div id="printModal">
+
+    <div class="print-modal-content">
+
+        <button id="closePrintModal">
+            &times;
+        </button>
+
+        <h2>
+            Print Enquiry
+        </h2>
+
+        <img
+            id="printPreview"
+            src=""
+            alt=""
+        >
+
+        <form id="printForm">
+
+            <select id="printSize" required>
+        
+                <option value="">
+                    Select Size
+                </option>
+        
+            </select>
+        
+            <select id="printFinish">
+        
+                <option>
+                    Fine Art Matte
+                </option>
+        
+                <option>
+                    Lustre
+                </option>
+        
+                <option>
+                    Canvas
+                </option>
+        
+            </select>
+        
+            <select id="printFrame">
+        
+                <option>
+                    Unframed
+                </option>
+        
+                <option>
+                    Black Frame
+                </option>
+        
+                <option>
+                    White Frame
+                </option>
+        
+                <option>
+                    Oak Frame
+                </option>
+        
+            </select>
+        
+            <input
+                id="customerName"
+                type="text"
+                placeholder="Your Name"
+                required
+            >
+        
+            <input
+                id="customerEmail"
+                type="email"
+                placeholder="Your Email"
+                required
+            >
+        
+            <textarea
+                id="customerNotes"
+                placeholder="Additional notes"
+            ></textarea>
+        
+            <button type="submit">
+                Submit Print Enquiry
+            </button>
+        
+        </form>
+
+    </div>
+
+</div>
 
     <!-- =========================
          Footer
@@ -57,6 +176,13 @@
 
     <div id="footer-placeholder"></div>
 
+    <script
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+
+<script>
+    emailjs.init("1LDb305ms-mGXgYpY");
+</script>
     <script src="gallery.js"></script>
     <script src="script.js"></script>
 

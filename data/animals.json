@@ -1,65 +1,125 @@
 [
     {
         "src": "animals-gallery/deerandmoon.jpg",
-        "alt": "Puffin taking flight"
+        "alt": "Deer and Moon",
+        "title": "Deer under Moonlight",
+        "location": "New Forest, England",
+        "description": "A deer having a quiet moment beneath the moonlight.",
+        "sizes": ["A4", "A3"]
     },
 
     {
         "src": "animals-gallery/ducklings.jpg",
-        "alt": "Fox in snow"
+        "alt": " ThreeDucklings",
+        "title": "Group of Ducklings",
+        "location": "South Wales",
+        "description": "A group of Ducklings together",
+        "sizes": ["A4", "A3"]
     },
 
     {
         "src": "animals-gallery/hamish.jpg",
-        "alt": "Deer under moon"
+        "alt": "Highland Cow",
+        "title": "Portrait of a Highland Cow sticking their tongue out",
+        "location": "North Wales",
+        "description": "A portrait of a highland cow in North Wales.",
+        "sizes": ["A4", "A3"]
     },
 
     {
         "src": "animals-gallery/heronheadshot.jpg",
-        "alt": "Otter"
+        "alt": "Heron closeup in Autumn",
+        "title": "Heron Headshot",
+        "location": "South Wales",
+        "description": "A closeup shot of a heron in autumn",
+        "sizes": ["A4", "A3"]
     },
     {
         "src": "animals-gallery/heronreflection.jpg",
-        "alt": "Heron"
+        "alt": "Reflection Heron",
+        "title": "Heron Reflections",
+        "location": "South Wales",
+        "description": "A heron on a calm autumn morning.",
+        "sizes": ["A4", "A3"]
     },
     {
         "src": "animals-gallery/loneduckling.jpg",
-        "alt": "Owl"
+        "alt": "Lonely Duckling",
+        "title": "A duckling sat on their own.",
+        "location": "South Wales",
+        "description": "A duckling sat on their own.",
+        "sizes": ["A4", "A3"]
     },
     {
         "src": "animals-gallery/lonepuffin.jpg",
-        "alt": "Owl"
+        "alt": "Single Puffin",
+        "title": "Puffin looking out to sea",
+        "location": "Skomer Island, Wales",
+        "description": "A single Puffin, looking out to sea.",
+        "sizes": ["A4", "A3"]
     },
     {
         "src": "animals-gallery/otter.jpg",
-        "alt": "Ponies"
+        "alt": "Otter",
+        "title": "Otter",
+        "location": "South England",
+        "description": "An otter on a frosty winter morning.",
+        "sizes": ["A4", "A3"]
     },
     {
         "src": "animals-gallery/owlblack.jpg",
-        "alt": "Puffin"
+        "alt": "Barn Own",
+        "title": "Barn Owl",
+        "location": "South England",
+        "description": "A lone barn owl with a darkened background.",
+        "sizes": ["A4", "A3"]
     },
     {
         "src": "animals-gallery/owlwhite.jpg",
-        "alt": "Ponies"
+        "alt": "Little Owl",
+        "title": "Little Own",
+        "location": "South England",
+        "description": "A close up of a little Owl with a bright background",
+        "sizes": ["A4", "A3"]
     },
     {
         "src": "animals-gallery/puffinflight.jpg",
-        "alt": "Ponies"
+        "alt": "Puffin Flight",
+        "title": "Flight of the Puffin",
+        "location": "Skomer Island, Wales",
+        "description": "A Puffin taking flight.",
+        "sizes": ["A4", "A3"]
     },
     {
         "src": "animals-gallery/snowfox.jpg",
-        "alt": "Ponies"
+        "alt": "Snow Fox",
+        "title": "Snow Fox",
+        "location": "South England",
+        "description": "A fox on a cold and frosty winters morning.",
+        "sizes": ["A4", "A3"]
     },
     {
         "src": "animals-gallery/sparrowdandelion.jpg",
-        "alt": "Ponies"
+        "alt": "Sparrow",
+        "title": "Sparrow",
+        "location": "South Wales",
+        "description": "A sparrow picking from a dandelion clock.",
+        "sizes": ["A4", "A3"]
     },
     {
         "src": "animals-gallery/wagtailbug.jpg",
-        "alt": "Ponies"
+        "alt": "Wagtail Bug",
+        "title": "Wagtail chase",
+        "location": "South Wales",
+        "description": "A wagtail takes flight to try and catch a small bug.",
+        "sizes": ["A4", "A3"]
     },
     {
         "src": "animals-gallery/wagtailflight.jpg",
-        "alt": "Ponies"
+        "alt": "Wagtail flight",
+        "title": "Wagtail Flight",
+        "location": "South Wales",
+        "description": "A wagtail taking flight, showing all of their beautiful feathers.",
+        "sizes": ["A4", "A3"]
     }
 ]

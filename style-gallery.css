@@ -158,6 +158,344 @@
 
 }
 
+
+/* =========================
+   Lightbox Info Panel
+========================= */
+
+.lightbox-info {
+
+    position: absolute;
+
+    left: 40px;
+    bottom: 40px;
+
+    z-index: 10;
+
+    width: min(480px, calc(100vw - 80px));
+
+    padding: 28px;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(20,20,20,0.55),
+            rgba(10,10,10,0.82)
+        );
+
+    backdrop-filter: blur(18px);
+
+    border:
+        1px solid rgba(255,255,255,0.08);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.35);
+
+}
+
+/* =========================
+   Typography
+========================= */
+
+.lightbox-meta h2 {
+
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+
+    font-weight: 500;
+
+    letter-spacing: -0.03em;
+
+    margin-bottom: 8px;
+
+    color: white;
+
+}
+
+#lightbox-location {
+
+    font-size: 0.95rem;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+
+    opacity: 0.7;
+
+    margin-bottom: 16px;
+
+}
+
+#lightbox-description {
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+
+    opacity: 0.88;
+
+    max-width: 42ch;
+
+}
+
+/* =========================
+   Collect Print Button
+========================= */
+
+#openPrintModal {
+
+    margin-top: 24px;
+
+    padding:
+        14px 26px;
+
+    border: none;
+
+    border-radius: 999px;
+
+    background:
+        rgba(255,255,255,0.12);
+
+    color: white;
+
+    font-size: 0.95rem;
+
+    font-weight: 500;
+
+    letter-spacing: 0.03em;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(12px);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border 0.3s ease;
+
+    border:
+        1px solid rgba(255,255,255,0.12);
+
+}
+
+#openPrintModal:hover {
+
+    transform: translateY(-2px);
+
+    background:
+        rgba(255,255,255,0.2);
+
+}
+
+/* =========================
+   Print Modal
+========================= */
+
+#printModal {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,0.82);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 24px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s ease;
+
+    z-index: 999999;
+
+    overflow-y: auto;
+
+    -webkit-overflow-scrolling: touch;
+
+}
+
+#printModal.active {
+
+    opacity: 1;
+    visibility: visible;
+
+}
+
+.print-modal-content {
+
+    position: relative;
+
+    width: min(92vw, 540px);
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background:
+        rgba(20,20,20,0.96);
+
+    backdrop-filter: blur(18px);
+
+    padding: 32px;
+
+    border-radius: 24px;
+
+    color: white;
+
+    border:
+        1px solid rgba(255,255,255,0.08);
+
+    box-shadow:
+        0 20px 80px rgba(0,0,0,0.45);
+
+}
+
+#printPreview {
+
+    width: 100%;
+
+    border-radius: 10px;
+
+    margin:
+        20px 0;
+
+}
+
+#printForm {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+
+}
+
+#printForm select,
+#printForm input,
+#printForm textarea {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    background: #1a1a1a;
+
+    color: white;
+
+    border-radius: 10px;
+
+}
+
+#printForm textarea {
+
+    min-height: 120px;
+
+    resize: vertical;
+
+}
+
+#printForm button {
+
+    padding: 16px;
+
+    border: none;
+
+    background: white;
+
+    color: black;
+
+    border-radius: 999px;
+
+    cursor: pointer;
+
+    font-size: 1rem;
+
+}
+
+#closePrintModal {
+
+    position: absolute;
+
+    top: 16px;
+    right: 16px;
+
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-size: 2rem;
+
+    cursor: pointer;
+
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 768px) {
+
+    .lightbox-info {
+
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+
+        width: auto;
+
+        padding: 20px;
+
+        border-radius: 20px;
+
+    }
+
+    .lightbox-meta h2 {
+
+        font-size: 1.5rem;
+
+    }
+
+    #lightbox-description {
+
+        font-size: 0.95rem;
+
+        line-height: 1.6;
+
+    }
+
+    #openPrintModal {
+
+        width: 100%;
+
+        justify-content: center;
+
+    }
+
+    .print-modal-content {
+
+        width: 100%;
+
+        max-height: 88vh;
+
+        padding: 24px;
+
+        border-radius: 20px;
+
+    }
+
+}
+
 /* =========================
    Active State
 ========================= */
@@ -189,8 +527,9 @@
 
     object-fit: contain;
 
+    padding-bottom: 120px;
+
     transform: scale(0.96);
-    
 
     transition: transform 0.3s ease;
 

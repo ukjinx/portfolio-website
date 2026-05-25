@@ -2,7 +2,8 @@
    Gallery Loader
 ========================= */
 
-const gallery = document.getElementById("gallery");
+const gallery =
+    document.getElementById("gallery");
 
 const galleryName =
     gallery.dataset.gallery;
@@ -46,9 +47,11 @@ function buildGallery() {
 
     images.forEach((image, index) => {
 
-        const item = document.createElement("div");
+        const item =
+            document.createElement("div");
 
-        item.className = "gallery-item";
+        item.className =
+            "gallery-item";
 
         item.innerHTML = `
             <img
@@ -63,12 +66,10 @@ function buildGallery() {
 
     });
 
-    attachGalleryEvents();
-
 }
 
 /* =========================
-   Lightbox
+   Lightbox Elements
 ========================= */
 
 const lightbox =
@@ -76,6 +77,15 @@ const lightbox =
 
 const lightboxImg =
     document.getElementById("lightbox-img");
+
+const lightboxTitle =
+    document.getElementById("lightbox-title");
+
+const lightboxLocation =
+    document.getElementById("lightbox-location");
+
+const lightboxDescription =
+    document.getElementById("lightbox-description");
 
 const closeBtn =
     document.getElementById("closeLightbox");
@@ -87,15 +97,46 @@ const nextBtn =
     document.getElementById("nextBtn");
 
 /* =========================
-   Open
+   Print Modal Elements
+========================= */
+
+const printModal =
+    document.getElementById("printModal");
+
+const openPrintModalBtn =
+    document.getElementById("openPrintModal");
+
+const closePrintModalBtn =
+    document.getElementById("closePrintModal");
+
+const printPreview =
+    document.getElementById("printPreview");
+
+const printSize =
+    document.getElementById("printSize");
+
+/* =========================
+   Open Lightbox
 ========================= */
 
 function openLightbox(index) {
 
     currentIndex = index;
 
+    const image =
+        images[index];
+
     lightboxImg.src =
-        images[index].src;
+        image.src;
+
+    lightboxTitle.textContent =
+        image.title;
+
+    lightboxLocation.textContent =
+        image.location;
+
+    lightboxDescription.textContent =
+        image.description;
 
     lightbox.classList.add("active");
 
@@ -105,14 +146,17 @@ function openLightbox(index) {
 }
 
 /* =========================
-   Close
+   Close Lightbox
 ========================= */
 
 function closeLightbox() {
 
-    lightbox.classList.remove("active");
+    lightbox.classList.remove(
+        "active"
+    );
 
-    document.body.style.overflow = "";
+    document.body.style.overflow =
+        "";
 
 }
 
@@ -126,8 +170,7 @@ function showNext() {
         (currentIndex + 1)
         % images.length;
 
-    lightboxImg.src =
-        images[currentIndex].src;
+    openLightbox(currentIndex);
 
 }
 
@@ -137,26 +180,83 @@ function showPrev() {
         (currentIndex - 1 + images.length)
         % images.length;
 
-    lightboxImg.src =
-        images[currentIndex].src;
+    openLightbox(currentIndex);
 
 }
 
 /* =========================
-   Events
+   Open Print Modal
 ========================= */
 
-gallery.addEventListener("click", e => {
+function openPrintModal() {
 
-    const image = e.target.closest("img");
+    const image =
+        images[currentIndex];
 
-    if (!image) return;
+    printPreview.src =
+        image.src;
 
-    openLightbox(
-        parseInt(image.dataset.index)
+    printSize.innerHTML =
+        `
+        <option value="">
+            Select Size
+        </option>
+        `;
+
+    image.sizes.forEach(size => {
+
+        const option =
+            document.createElement(
+                "option"
+            );
+
+        option.value = size;
+
+        option.textContent = size;
+
+        printSize.appendChild(option);
+
+    });
+
+    printModal.classList.add(
+        "active"
     );
 
-});
+}
+
+/* =========================
+   Close Print Modal
+========================= */
+
+function closePrintModal() {
+
+    printModal.classList.remove(
+        "active"
+    );
+
+}
+
+/* =========================
+   Gallery Events
+========================= */
+
+gallery.addEventListener(
+    "click",
+    e => {
+
+        const image =
+            e.target.closest("img");
+
+        if (!image) return;
+
+        openLightbox(
+            parseInt(
+                image.dataset.index
+            )
+        );
+
+    }
+);
 
 closeBtn.addEventListener(
     "click",
@@ -171,6 +271,16 @@ nextBtn.addEventListener(
 prevBtn.addEventListener(
     "click",
     showPrev
+);
+
+openPrintModalBtn.addEventListener(
+    "click",
+    openPrintModal
+);
+
+closePrintModalBtn.addEventListener(
+    "click",
+    closePrintModal
 );
 
 /* =========================
@@ -188,7 +298,11 @@ document.addEventListener(
         ) return;
 
         if (e.key === "Escape") {
+
             closeLightbox();
+
+            closePrintModal();
+
         }
 
         if (e.key === "ArrowRight") {
@@ -198,6 +312,94 @@ document.addEventListener(
         if (e.key === "ArrowLeft") {
             showPrev();
         }
+
+    }
+);
+
+
+/* =========================
+   Print Form Submit
+========================= */
+
+const printForm =
+    document.getElementById(
+        "printForm"
+    );
+
+printForm.addEventListener(
+    "submit",
+    function (e) {
+
+        e.preventDefault();
+
+        const image =
+            images[currentIndex];
+
+        const templateParams = {
+
+            image_title:
+                image.title,
+
+            print_size:
+                document.getElementById(
+                    "printSize"
+                ).value,
+
+            print_finish:
+                document.getElementById(
+                    "printFinish"
+                ).value,
+
+            print_frame:
+                document.getElementById(
+                    "printFrame"
+                ).value,
+
+            customer_name:
+                document.getElementById(
+                    "customerName"
+                ).value,
+
+            customer_email:
+                document.getElementById(
+                    "customerEmail"
+                ).value,
+
+            notes:
+                document.getElementById(
+                    "customerNotes"
+                ).value
+
+        };
+
+        emailjs.send(
+            "1LDb305ms-mGXgYpY",
+            "template_iovxs07",
+            templateParams
+        )
+        .then(() => {
+
+            alert(
+                "Print enquiry sent successfully."
+            );
+
+            printForm.reset();
+
+            closePrintModal();
+
+        })
+        .catch(error => {
+
+            console.error(
+                "EmailJS Error:",
+                error
+            );
+
+            alert(
+                "Something went wrong. Please try again."
+            );
+
+        });
 
     }
 );
