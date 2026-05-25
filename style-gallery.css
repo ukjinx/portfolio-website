@@ -247,6 +247,8 @@
 
     margin-top: 24px;
 
+    margin-right: 12px;
+
     padding:
         14px 26px;
 
@@ -280,6 +282,81 @@
 }
 
 #openPrintModal:hover {
+
+    transform: translateY(-2px);
+
+    background:
+        rgba(255,255,255,0.2);
+
+}
+
+.lightbox-actions {
+
+    display: flex;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+    margin-top: 24px;
+
+}
+
+.lightbox-actions button {
+
+    flex: 1;
+
+}
+
+/* =========================
+   Add To Selection Button
+========================= */
+
+#addToSelectionBtn {
+
+    margin-top: 14px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding:
+        14px 26px;
+
+    border: none;
+
+    border-radius: 999px;
+
+    background:
+        rgba(255,255,255,0.12);
+
+    color: white;
+
+    font-size: 0.95rem;
+
+    font-weight: 500;
+
+    letter-spacing: 0.03em;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(12px);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border 0.3s ease;
+
+    border:
+        1px solid rgba(255,255,255,0.12);
+
+}
+
+#addToSelectionBtn:hover {
 
     transform: translateY(-2px);
 
@@ -480,6 +557,12 @@
 
         justify-content: center;
 
+    }
+
+    #addToSelectionBtn {
+
+        width: 100%;
+    
     }
 
     .print-modal-content {
