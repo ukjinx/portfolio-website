@@ -1,38 +1,60 @@
+/* =========================
+   Load Components
+========================= */
+
 async function loadComponent(id, file) {
 
-  const element = document.getElementById(id);
+  const element =
+    document.getElementById(id);
 
   if (!element) return;
 
-  const response = await fetch(file);
+  const response =
+    await fetch(file);
 
-  const html = await response.text();
+  const html =
+    await response.text();
 
   element.innerHTML = html;
 
 }
 
-loadComponent(
-  "nav-placeholder",
-  "components/nav.html"
-);
+/* =========================
+   Init Site
+========================= */
 
-loadComponent(
-  "footer-placeholder",
-  "components/footer.html"
-);
+async function initSite() {
 
-window.addEventListener("DOMContentLoaded", () => {
+  /* Load nav + footer first */
+
+  await loadComponent(
+    "nav-placeholder",
+    "components/nav.html"
+  );
+
+  await loadComponent(
+    "footer-placeholder",
+    "components/footer.html"
+  );
+
+  /* =========================
+     Active Nav Link
+  ========================= */
 
   const currentPage =
-    window.location.pathname.split("/").pop();
+    window.location.pathname
+      .split("/")
+      .pop();
 
   const navLinks =
-    document.querySelectorAll(".topnav a");
+    document.querySelectorAll(
+      ".topnav a"
+    );
 
   navLinks.forEach(link => {
 
-    const href = link.getAttribute("href");
+    const href =
+      link.getAttribute("href");
 
     if (href === currentPage) {
 
@@ -42,28 +64,113 @@ window.addEventListener("DOMContentLoaded", () => {
 
   });
 
-});
+  /* =========================
+     Mobile Navigation Toggle
+  ========================= */
 
-const sections =
-  document.querySelectorAll(".about-section");
+  const menuIcon =
+    document.querySelector(
+      ".topnav .icon"
+    );
 
-const observer =
-  new IntersectionObserver(entries => {
+  const topnav =
+    document.querySelector(
+      ".topnav"
+    );
 
-    entries.forEach(entry => {
+  if (menuIcon && topnav) {
 
-      if (entry.isIntersecting) {
+    menuIcon.addEventListener(
+      "click",
+      e => {
 
-        entry.target.classList.add("visible");
+        e.preventDefault();
+
+        topnav.classList.toggle(
+          "responsive"
+        );
 
       }
+    );
 
-    });
+  }
 
-  }, {
-    threshold: 0.15
+  /* =========================
+     Mobile Dropdown Toggle
+  ========================= */
+
+  const dropdownButtons =
+    document.querySelectorAll(
+      ".dropdown .dropbtn"
+    );
+
+  dropdownButtons.forEach(button => {
+
+    button.addEventListener(
+      "click",
+      e => {
+
+        if (
+          window.innerWidth <= 768
+        ) {
+
+          e.preventDefault();
+
+          const dropdown =
+            button.parentElement;
+
+          dropdown.classList.toggle(
+            "open"
+          );
+
+        }
+
+      }
+    );
+
   });
 
+}
+
+/* =========================
+   About Section Animation
+========================= */
+
+const sections =
+  document.querySelectorAll(
+    ".about-section"
+  );
+
+const observer =
+  new IntersectionObserver(
+    entries => {
+
+      entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+          entry.target.classList.add(
+            "visible"
+          );
+
+        }
+
+      });
+
+    },
+    {
+      threshold: 0.15
+    }
+  );
+
 sections.forEach(section => {
+
   observer.observe(section);
+
 });
+
+/* =========================
+   Init
+========================= */
+
+initSite();

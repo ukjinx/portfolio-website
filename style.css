@@ -352,6 +352,20 @@ em {
 }
 
 /* =========================
+   Mobile Dropdown Open State
+========================= */
+
+@media screen and (max-width: 768px) {
+
+  .dropdown.open .dropdown-content {
+
+    display: block;
+
+  }
+
+}
+
+/* =========================
    Hero Section
 ========================= */
 
