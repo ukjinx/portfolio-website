@@ -44,11 +44,104 @@
             &#10094;
         </button>
 
-        <img id="lightbox-img">
+        <img
+            id="lightbox-img"
+            alt=""
+        >
 
         <button class="lightbox-nav next" id="nextBtn">
             &#10095;
         </button>
+
+        <!-- =========================
+             Lightbox Info
+        ========================== -->
+
+        <div class="lightbox-info">
+
+            <div class="lightbox-meta">
+
+                <h2 id="lightbox-title"></h2>
+
+                <p id="lightbox-location"></p>
+
+                <p id="lightbox-description"></p>
+
+            </div>
+
+            <div class="lightbox-actions">
+
+                <button id="addToSelectionBtn">
+                    Add To Print Selection
+                </button>
+
+                <button id="openPrintModal">
+                    View Selection
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- =========================
+         Print Selection Tray
+    ========================== -->
+
+    <button id="selectionTray">
+
+        Selected Prints
+        (<span id="selectionCount">0</span>)
+
+    </button>
+
+    <!-- =========================
+         Print Modal
+    ========================== -->
+
+    <div id="printModal">
+
+        <div class="print-modal-content">
+
+            <button id="closePrintModal">
+                &times;
+            </button>
+
+            <h2>
+                Print Selection
+            </h2>
+
+            <div id="selectedPrints"></div>
+
+            <form id="printForm">
+
+                <input
+                    id="customerName"
+                    type="text"
+                    placeholder="Your Name"
+                    required
+                >
+
+                <input
+                    id="customerEmail"
+                    type="email"
+                    placeholder="Your Email"
+                    required
+                >
+
+                <textarea
+                    id="customerNotes"
+                    placeholder="Additional notes"
+                ></textarea>
+
+                <button type="submit">
+                    Submit Print Enquiry
+                </button>
+
+            </form>
+
+        </div>
 
     </div>
 
@@ -57,6 +150,20 @@
     ========================== -->
 
     <div id="footer-placeholder"></div>
+
+    <!-- =========================
+         EmailJS
+    ========================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script>
+        emailjs.init("1LDb305ms-mGXgYpY");
+    </script>
+
+    <!-- =========================
+         Scripts
+    ========================== -->
 
     <script src="gallery.js"></script>
     <script src="script.js"></script>

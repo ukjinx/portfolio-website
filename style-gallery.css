@@ -366,6 +366,53 @@
 }
 
 /* =========================
+   Selection Added Animation
+========================= */
+
+#selectionTray.pulse {
+
+    animation:
+        trayPulse 0.6s ease;
+
+}
+
+@keyframes trayPulse {
+
+    0% {
+
+        transform: scale(1);
+
+    }
+
+    40% {
+
+        transform: scale(1.08);
+
+    }
+
+    100% {
+
+        transform: scale(1);
+
+    }
+
+}
+
+/* =========================
+   Added State Button
+========================= */
+
+#addToSelectionBtn.added {
+
+    background:
+        rgba(120,255,180,0.18);
+
+    border:
+        1px solid rgba(120,255,180,0.35);
+
+}
+
+/* =========================
    Print Modal
 ========================= */
 
@@ -871,11 +918,81 @@
 
 .selected-print-info p {
 
-    font-size: 0.9rem;
+    font-size: 0.88rem;
 
-    opacity: 0.75;
+    opacity: 0.7;
 
-    margin-bottom: 6px;
+    margin:
+        10px 0 6px;
+
+}
+
+/* =========================
+   Selection Dropdown Styling
+========================= */
+
+.selected-print-info select {
+
+    width: 100%;
+
+    margin-top: 8px;
+    margin-bottom: 10px;
+
+    padding: 12px 14px;
+
+    border-radius: 10px;
+
+    border:
+        1px solid rgba(255,255,255,0.08);
+
+    background:
+        rgba(255,255,255,0.06);
+
+    color: white;
+
+    font-size: 0.92rem;
+
+    outline: none;
+
+    backdrop-filter: blur(10px);
+
+    transition:
+        border 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease;
+
+    appearance: none;
+
+}
+
+/* Hover */
+
+.selected-print-info select:hover {
+
+    background:
+        rgba(255,255,255,0.09);
+
+}
+
+/* Focus */
+
+.selected-print-info select:focus {
+
+    border:
+        1px solid rgba(255,255,255,0.22);
+
+    background:
+        rgba(255,255,255,0.1);
+
+}
+
+/* Dropdown Options */
+
+.selected-print-info select option {
+
+    background: #1a1a1a;
+
+    color: white;
 
 }
 

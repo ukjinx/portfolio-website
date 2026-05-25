@@ -12,7 +12,12 @@ let images = [];
 
 let currentIndex = 0;
 
-let selectedPrints = [];
+let selectedPrints =
+    JSON.parse(
+        localStorage.getItem(
+            "selectedPrints"
+        )
+    ) || [];
 
 /* =========================
    Load JSON
@@ -117,6 +122,11 @@ const selectedPrintsContainer =
 const addToSelectionBtn =
     document.getElementById(
         "addToSelectionBtn"
+    );
+
+const openPrintModalBtn =
+    document.getElementById(
+        "openPrintModal"
     );
 
 const closePrintModalBtn =
@@ -225,7 +235,130 @@ function addCurrentPrint() {
         selection
     );
 
+    saveSelections();
+
     updateSelectionTray();
+
+/* =========================
+   Save Selections
+========================= */
+
+function saveSelections() {
+
+    localStorage.setItem(
+        "selectedPrints",
+        JSON.stringify(
+            selectedPrints
+        )
+    );
+
+}
+
+/* =========================
+   Add Print Selection
+========================= */
+
+function addCurrentPrint() {
+
+    const image =
+        images[currentIndex];
+
+    const selection = {
+
+        title:
+            image.title,
+
+        src:
+            image.src,
+
+        size:
+            image.sizes[0],
+
+        finish:
+            "Fine Art Matte",
+
+        frame:
+            "Unframed"
+
+    };
+
+    selectedPrints.push(
+        selection
+    );
+
+    saveSelections();
+
+    updateSelectionTray();
+
+    /* =========================
+       Tray Animation
+    ========================== */
+
+    selectionTray.classList.add(
+        "pulse"
+    );
+
+    addToSelectionBtn.classList.add(
+        "added"
+    );
+
+    addToSelectionBtn.textContent =
+        "Added ✓";
+
+    setTimeout(() => {
+
+        selectionTray.classList.remove(
+            "pulse"
+        );
+
+    }, 600);
+
+    setTimeout(() => {
+
+        addToSelectionBtn.classList.remove(
+            "added"
+        );
+
+        addToSelectionBtn.textContent =
+            "Add To Print Selection";
+
+    }, 1400);
+
+}
+
+    /* =========================
+       Tray Animation
+    ========================== */
+
+    selectionTray.classList.add(
+        "pulse"
+    );
+
+    addToSelectionBtn.classList.add(
+        "added"
+    );
+
+    addToSelectionBtn.textContent =
+        "Added ✓";
+
+    setTimeout(() => {
+
+        selectionTray.classList.remove(
+            "pulse"
+        );
+
+    }, 600);
+
+    setTimeout(() => {
+
+        addToSelectionBtn.classList.remove(
+            "added"
+        );
+
+        addToSelectionBtn.textContent =
+            "Add To Print Selection";
+
+    }, 1400);
 
 }
 
@@ -260,6 +393,35 @@ function renderSelectedPrints() {
             item.className =
                 "selected-print";
 
+                const matchingImage =
+                images.find(
+                    img =>
+                        img.title === print.title
+                );
+            
+            const availableSizes =
+                matchingImage?.sizes || [
+                    print.size
+                ];
+            
+            const sizeOptions =
+                availableSizes.map(size => {
+
+                    return `
+                        <option
+                            value="${size}"
+                            ${
+                                print.size === size
+                                    ? "selected"
+                                    : ""
+                            }
+                        >
+                            ${size}
+                        </option>
+                    `;
+
+                }).join("");
+
             item.innerHTML = `
                 <img src="${print.src}">
 
@@ -269,20 +431,99 @@ function renderSelectedPrints() {
                         ${print.title}
                     </h3>
 
-                    <p>
-                        Size:
-                        ${print.size}
-                    </p>
+                    <label>
+                        Size
+                    </label>
 
-                    <p>
-                        Finish:
-                        ${print.finish}
-                    </p>
+                    <select
+                        class="edit-size"
+                        data-index="${index}"
+                    >
+                        ${sizeOptions}
+                    </select>
 
-                    <p>
-                        Frame:
-                        ${print.frame}
-                    </p>
+                    <label>
+                        Finish
+                    </label>
+
+                    <select
+                        class="edit-finish"
+                        data-index="${index}"
+                    >
+                        <option ${
+                            print.finish ===
+                            "Fine Art Matte"
+                                ? "selected"
+                                : ""
+                        }>
+                            Fine Art Matte
+                        </option>
+
+                        <option ${
+                            print.finish ===
+                            "Lustre"
+                                ? "selected"
+                                : ""
+                        }>
+                            Lustre
+                        </option>
+
+                        <option ${
+                            print.finish ===
+                            "Canvas"
+                                ? "selected"
+                                : ""
+                        }>
+                            Canvas
+                        </option>
+
+                    </select>
+
+                    <label>
+                        Frame
+                    </label>
+
+                    <select
+                        class="edit-frame"
+                        data-index="${index}"
+                    >
+                        <option ${
+                            print.frame ===
+                            "Unframed"
+                                ? "selected"
+                                : ""
+                        }>
+                            Unframed
+                        </option>
+
+                        <option ${
+                            print.frame ===
+                            "Black Frame"
+                                ? "selected"
+                                : ""
+                        }>
+                            Black Frame
+                        </option>
+
+                        <option ${
+                            print.frame ===
+                            "White Frame"
+                                ? "selected"
+                                : ""
+                        }>
+                            White Frame
+                        </option>
+
+                        <option ${
+                            print.frame ===
+                            "Oak Frame"
+                                ? "selected"
+                                : ""
+                        }>
+                            Oak Frame
+                        </option>
+
+                    </select>
 
                     <button
                         class="remove-print"
@@ -317,6 +558,11 @@ function openPrintModal() {
 
 }
 
+openPrintModalBtn.addEventListener(
+    "click",
+    openPrintModal
+);
+
 /* =========================
    Remove Print
 ========================= */
@@ -341,9 +587,66 @@ selectedPrintsContainer.addEventListener(
                 1
             );
 
+            saveSelections();
+
             renderSelectedPrints();
 
             updateSelectionTray();
+
+        }
+
+    }
+);
+
+/* =========================
+   Update Print Options
+========================= */
+
+selectedPrintsContainer.addEventListener(
+    "change",
+    e => {
+
+        const index =
+            parseInt(
+                e.target.dataset.index
+            );
+
+        if (
+            e.target.classList.contains(
+                "edit-size"
+            )
+        ) {
+
+            selectedPrints[index].size =
+                e.target.value;
+
+                saveSelections();
+
+        }
+
+        if (
+            e.target.classList.contains(
+                "edit-finish"
+            )
+        ) {
+
+            selectedPrints[index].finish =
+                e.target.value;
+
+                saveSelections();
+
+        }
+
+        if (
+            e.target.classList.contains(
+                "edit-frame"
+            )
+        ) {
+
+            selectedPrints[index].frame =
+                e.target.value;
+
+                saveSelections();
 
         }
 
@@ -517,6 +820,8 @@ Frame: ${print.frame}
 
             selectedPrints = [];
 
+            saveSelections();
+
             renderSelectedPrints();
 
             updateSelectionTray();
@@ -543,5 +848,7 @@ Frame: ${print.frame}
 /* =========================
    Init
 ========================= */
+
+updateSelectionTray();
 
 loadGallery();
