@@ -465,38 +465,42 @@ printForm.addEventListener(
         e.preventDefault();
 
         const selections =
-    selectedPrints.map(print => {
+            selectedPrints.map(
+                print => {
 
-        return `
+                    return `
 Image: ${print.title}
 Size: ${print.size}
 Finish: ${print.finish}
 Frame: ${print.frame}
 `;
 
-    }).join("\n----------------\n");
+                }
+            ).join(
+                "\n----------------\n"
+            );
 
-const templateParams = {
+        const templateParams = {
 
-    selections:
-        selections,
+            selections:
+                selections,
 
-    customer_name:
-        document.getElementById(
-            "customerName"
-        ).value,
+            customer_name:
+                document.getElementById(
+                    "customerName"
+                ).value,
 
-    customer_email:
-        document.getElementById(
-            "customerEmail"
-        ).value,
+            customer_email:
+                document.getElementById(
+                    "customerEmail"
+                ).value,
 
-    notes:
-        document.getElementById(
-            "customerNotes"
-        ).value
+            notes:
+                document.getElementById(
+                    "customerNotes"
+                ).value
 
-};
+        };
 
         emailjs.send(
             "service_dvg53gr",
@@ -510,6 +514,12 @@ const templateParams = {
             );
 
             printForm.reset();
+
+            selectedPrints = [];
+
+            renderSelectedPrints();
+
+            updateSelectionTray();
 
             closePrintModal();
 
