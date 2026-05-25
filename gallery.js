@@ -204,42 +204,6 @@ function showPrev() {
 }
 
 /* =========================
-   Add Print Selection
-========================= */
-
-function addCurrentPrint() {
-
-    const image =
-        images[currentIndex];
-
-    const selection = {
-
-        title:
-            image.title,
-
-        src:
-            image.src,
-
-        size:
-            image.sizes[0],
-
-        finish:
-            "Fine Art Matte",
-
-        frame:
-            "Unframed"
-
-    };
-
-    selectedPrints.push(
-        selection
-    );
-
-    saveSelections();
-
-    updateSelectionTray();
-
-/* =========================
    Save Selections
 ========================= */
 
@@ -289,42 +253,6 @@ function addCurrentPrint() {
     saveSelections();
 
     updateSelectionTray();
-
-    /* =========================
-       Tray Animation
-    ========================== */
-
-    selectionTray.classList.add(
-        "pulse"
-    );
-
-    addToSelectionBtn.classList.add(
-        "added"
-    );
-
-    addToSelectionBtn.textContent =
-        "Added ✓";
-
-    setTimeout(() => {
-
-        selectionTray.classList.remove(
-            "pulse"
-        );
-
-    }, 600);
-
-    setTimeout(() => {
-
-        addToSelectionBtn.classList.remove(
-            "added"
-        );
-
-        addToSelectionBtn.textContent =
-            "Add To Print Selection";
-
-    }, 1400);
-
-}
 
     /* =========================
        Tray Animation
