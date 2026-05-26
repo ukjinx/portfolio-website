@@ -2,234 +2,234 @@
     {
         "src": "landscape-gallery/beddgelertforest.jpg",
         "alt": "Beddgelert Forest",
-        "title": "Deer under Moonlight",
-        "location": "New Forest, England",
-        "description": "A deer having a quiet moment beneath the moonlight.",
+        "title": "Beddgelert Forest",
+        "location": "North Wales",
+        "description": "A track in Beddgelert forest, leading to the mountain",
         "sizes": ["A4", "A3"]
     },
 
     {
         "src": "landscape-gallery/boathouse.jpg",
         "alt": "Norwegian Boat House",
-        "title": "Deer under Moonlight",
-        "location": "New Forest, England",
-        "description": "A deer having a quiet moment beneath the moonlight.",
+        "title": "Norwegian Boat House",
+        "location": "Norway",
+        "description": "A famous red boat house in Norway, with fog covering the fjord",
         "sizes": ["A4", "A3"]
     },
 
     {
         "src": "landscape-gallery/bwturbine.jpg",
         "alt": "Wind Turbine",
-        "title": "Deer under Moonlight",
-        "location": "New Forest, England",
-        "description": "A deer having a quiet moment beneath the moonlight.",
+        "title": "Wind Turbine",
+        "location": "South Wales",
+        "description": "A dramatic black and white image of a wind turbine",
         "sizes": ["A4", "A3"]
     },
 
     {
         "src": "landscape-gallery/castlecoch.jpg",
         "alt": "Castle Coch",
-        "title": "Deer under Moonlight",
-        "location": "New Forest, England",
-        "description": "A deer having a quiet moment beneath the moonlight.",
+        "title": "Autumn Castle",
+        "location": "South Wales",
+        "description": "Autumn landscape with Castle Coch looming in the background",
         "sizes": ["A4", "A3"]
     },
 
     {
         "src": "landscape-gallery/cwmidwal.jpg",
         "alt": "Cwm Idwal",
-        "title": "Deer under Moonlight",
-        "location": "New Forest, England",
-        "description": "A deer having a quiet moment beneath the moonlight.",
+        "title": "Cwm Idwal",
+        "location": "North Wales",
+        "description": "A dramatic and moody image of Cwm Idwal.",
         "sizes": ["A4", "A3"]
     },
 
     {
         "src": "landscape-gallery/derwentwater.jpg",
         "alt": "Derwent Water",
-        "title": "Deer under Moonlight",
-        "location": "New Forest, England",
-        "description": "A deer having a quiet moment beneath the moonlight.",
+        "title": "Sunset over Derwent Water",
+        "location": "Lake District, England",
+        "description": "Sunset colours over Derwent water.",
         "sizes": ["A4", "A3"]
     },
 
     {
         "src": "landscape-gallery/fishingboat.jpg",
         "alt": "Lone fishing boat in the fjord",
-        "title": "Deer under Moonlight",
-        "location": "New Forest, England",
-        "description": "A deer having a quiet moment beneath the moonlight.",
+        "title": "Fishing under the mountain",
+        "location": "Norway",
+        "description": "A tiny fishing boat at the base of a mountain, showing the scale.",
         "sizes": ["A4", "A3"]
     },
 
     {
         "src": "landscape-gallery/fjord.jpg",
         "alt": "Panoramic view of a Fjord",
-        "title": "Deer under Moonlight",
-        "location": "New Forest, England",
-        "description": "A deer having a quiet moment beneath the moonlight.",
-        "sizes": ["A4", "A3"]
+        "title": "Fjord Valley",
+        "location": "Norway",
+        "description": "A fjord running through the valley.",
+        "sizes": ["Pano"]
     },
 
     {
         "src": "landscape-gallery/forestofdean.jpg",
         "alt": "Forest of Dean",
-        "title": "Deer under Moonlight",
-        "location": "New Forest, England",
-        "description": "A deer having a quiet moment beneath the moonlight.",
+        "title": "Sun light through the trees",
+        "location": "Forest of Dean, England",
+        "description": "A simple and beautiful forest scene.",
         "sizes": ["A4", "A3"]
     },
 
     {
         "src": "landscape-gallery/glanllynstars.jpg",
-        "alt": "Stars in a park",
-        "title": "Deer under Moonlight",
-        "location": "New Forest, England",
-        "description": "A deer having a quiet moment beneath the moonlight.",
+        "alt": "Stars in the park",
+        "title": "Stars in the park",
+        "location": "South Wales",
+        "description": "Stars shining brightly in the park.",
         "sizes": ["A4", "A3"]
     },
 
     {
         "src": "landscape-gallery/lightrays.jpg",
         "alt": "God Rays in the Forest",
-        "title": "Deer under Moonlight",
-        "location": "New Forest, England",
-        "description": "A deer having a quiet moment beneath the moonlight.",
+        "title": "God Rays",
+        "location": "South Wales",
+        "description": "Sunlight bursting through the forest.",
         "sizes": ["A4", "A3"]
     },
 
     {
         "src": "landscape-gallery/lonelytree.jpg",
         "alt": "The famous Llenberis Lonely Tree",
-        "title": "Deer under Moonlight",
-        "location": "New Forest, England",
-        "description": "A deer having a quiet moment beneath the moonlight.",
+        "title": "Sunset Lonely Tree",
+        "location": "North Wales",
+        "description": "The famous lonely tree at sunset.",
         "sizes": ["A4", "A3"]
     },
 
     {
         "src": "landscape-gallery/menaibridge.jpg",
         "alt": "Menai Bridge",
-        "title": "Deer under Moonlight",
-        "location": "New Forest, England",
-        "description": "A deer having a quiet moment beneath the moonlight.",
+        "title": "Menai Bridge",
+        "location": "North Wales",
+        "description": "The Menai Bridge being basked with golden light.",
         "sizes": ["A4", "A3"]
     },
 
     {
         "src": "landscape-gallery/mountainrange.jpg",
         "alt": "A Norwegian Mountain Range",
-        "title": "Deer under Moonlight",
-        "location": "New Forest, England",
-        "description": "A deer having a quiet moment beneath the moonlight.",
+        "title": "Norwegian Mountain Range",
+        "location": "Norway",
+        "description": "A great mountain range on the fjords.",
         "sizes": ["A4", "A3"]
     },
 
     {
         "src": "landscape-gallery/mountainsunset.jpg",
         "alt": "A Mountain at Sunset",
-        "title": "Deer under Moonlight",
-        "location": "New Forest, England",
-        "description": "A deer having a quiet moment beneath the moonlight.",
+        "title": "A mountain at sunset",
+        "location": "Norway",
+        "description": "The mountain catching the last of the days light.",
         "sizes": ["A4", "A3"]
     },
 
     {
         "src": "landscape-gallery/norwayfjord.jpg",
         "alt": "A Panoramic view of the Norwegian Fjord",
-        "title": "Deer under Moonlight",
-        "location": "New Forest, England",
-        "description": "A deer having a quiet moment beneath the moonlight.",
-        "sizes": ["A4", "A3"]
+        "title": "Views of the Fjord",
+        "location": "Norway",
+        "description": "A bright and open fjord, with dramatic clouds.",
+        "sizes": ["Pano"]
     },
 
     {
         "src": "landscape-gallery/ogwenvalley.jpg",
         "alt": "Ogwen Valley",
-        "title": "Deer under Moonlight",
-        "location": "New Forest, England",
-        "description": "A deer having a quiet moment beneath the moonlight.",
-        "sizes": ["A4", "A3"]
+        "title": "Ogwen Valley",
+        "location": "North Wales",
+        "description": "Tryfan stands proud in the Ogwen Valley, as the sun sets.",
+        "sizes": ["Pano"]
     },
 
     {
         "src": "landscape-gallery/penyfansunset.jpg",
         "alt": "Pen Y Fan at Sunset",
-        "title": "Deer under Moonlight",
-        "location": "New Forest, England",
-        "description": "A deer having a quiet moment beneath the moonlight.",
+        "title": "Pen Y Fan Sunset",
+        "location": "South Wales",
+        "description": "Pen Y Fan basked in golden light at sunset, while the last bits of snow remain.",
         "sizes": ["A4", "A3"]
     },
 
     {
         "src": "landscape-gallery/pinetrees.jpg",
         "alt": "Foggy Norwegian Pine Trees",
-        "title": "Deer under Moonlight",
-        "location": "New Forest, England",
-        "description": "A deer having a quiet moment beneath the moonlight.",
+        "title": "Norwegian Pine",
+        "location": "Norway",
+        "description": "A foggy morning covers the Norwegian pine trees..",
         "sizes": ["A4", "A3"]
     },
 
     {
         "src": "landscape-gallery/roadtosnowdon.jpg",
         "alt": "Road to Snowdon",
-        "title": "Deer under Moonlight",
-        "location": "New Forest, England",
-        "description": "A deer having a quiet moment beneath the moonlight.",
-        "sizes": ["A4", "A3"]
+        "title": "Road to Snowdon",
+        "location": "North Wales",
+        "description": "A winding road, leads to the mountain covered in snow.",
+        "sizes": ["Square"]
     },
 
     {
         "src": "landscape-gallery/snowdonhorseshoe.jpg",
         "alt": "Panoramic view of the Snowdon Horseshoe",
-        "title": "Deer under Moonlight",
-        "location": "New Forest, England",
-        "description": "A deer having a quiet moment beneath the moonlight.",
-        "sizes": ["A4", "A3"]
+        "title": "Winter Snowdon Horseshoe",
+        "location": "North Wales",
+        "description": "A breathtaking view of the Snowdon Horseshoe, covered in snow.",
+        "sizes": ["Pano"]
     },
 
     {
         "src": "landscape-gallery/stpauls.jpg",
         "alt": "St Pauls Cathedral and Millenium Bridge",
-        "title": "Deer under Moonlight",
-        "location": "New Forest, England",
-        "description": "A deer having a quiet moment beneath the moonlight.",
+        "title": "St Pauls and Millenium Bridge",
+        "location": "London, England",
+        "description": "London landsape as the bridge crosses the Thames.",
         "sizes": ["A4", "A3"]
     },
 
     {
         "src": "landscape-gallery/sunsetfields.jpg",
         "alt": "Welsh fields at sunset",
-        "title": "Deer under Moonlight",
-        "location": "New Forest, England",
-        "description": "A deer having a quiet moment beneath the moonlight.",
+        "title": "Sunset fields",
+        "location": "South Wales",
+        "description": "A calm and peaceful scene of fields during the last of the days light.",
         "sizes": ["A4", "A3"]
     },
 
     {
         "src": "landscape-gallery/trollroad.jpg",
         "alt": "Troll Road and Valley",
-        "title": "Deer under Moonlight",
-        "location": "New Forest, England",
-        "description": "A deer having a quiet moment beneath the moonlight.",
+        "title": "Troll Road",
+        "location": "Norway",
+        "description": "A Norwegian valley with a long and winding road.",
         "sizes": ["A4", "A3"]
     },
 
     {
         "src": "landscape-gallery/tryfanclouds.jpg",
         "alt": "Tryfan in Clouds",
-        "title": "Deer under Moonlight",
-        "location": "New Forest, England",
-        "description": "A deer having a quiet moment beneath the moonlight.",
+        "title": "Tryfan inversion",
+        "location": "North Wales",
+        "description": "A stunning scene, as the mountain summit pokes above the cloud line.",
         "sizes": ["A4", "A3"]
     },
 
     {
         "src": "landscape-gallery/tryfanstream.jpg",
         "alt": "Stream to Tryfan",
-        "title": "Deer under Moonlight",
-        "location": "New Forest, England",
-        "description": "A deer having a quiet moment beneath the moonlight.",
+        "title": "Tryfan Stream",
+        "location": "North Wales",
+        "description": "Stream running off the iconic Tryfan mountain.",
         "sizes": ["A4", "A3"]
     }
 ]

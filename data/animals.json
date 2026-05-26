@@ -104,7 +104,7 @@
         "title": "Sparrow",
         "location": "South Wales",
         "description": "A sparrow picking from a dandelion clock.",
-        "sizes": ["A4", "A3"]
+        "sizes": ["Square"]
     },
     {
         "src": "animals-gallery/wagtailbug.jpg",

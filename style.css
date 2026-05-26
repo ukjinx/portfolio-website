@@ -1262,6 +1262,13 @@ hr.style-seven {
 
 }
 
+.size-card.square {
+
+  width: 260px;
+  height: 260px;
+
+}
+
 .size-card.pano {
 
   width: 460px;

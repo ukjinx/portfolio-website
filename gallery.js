@@ -238,8 +238,8 @@ function addCurrentPrint() {
         size:
             image.sizes[0],
 
-        finish:
-            "Fine Art Matte",
+        // finish:
+        //     "Fine Art Matte",
 
         frame:
             "Unframed"
@@ -368,43 +368,6 @@ function renderSelectedPrints() {
                         data-index="${index}"
                     >
                         ${sizeOptions}
-                    </select>
-
-                    <label>
-                        Finish
-                    </label>
-
-                    <select
-                        class="edit-finish"
-                        data-index="${index}"
-                    >
-                        <option ${
-                            print.finish ===
-                            "Fine Art Matte"
-                                ? "selected"
-                                : ""
-                        }>
-                            Fine Art Matte
-                        </option>
-
-                        <option ${
-                            print.finish ===
-                            "Lustre"
-                                ? "selected"
-                                : ""
-                        }>
-                            Lustre
-                        </option>
-
-                        <option ${
-                            print.finish ===
-                            "Canvas"
-                                ? "selected"
-                                : ""
-                        }>
-                            Canvas
-                        </option>
-
                     </select>
 
                     <label>
@@ -552,18 +515,18 @@ selectedPrintsContainer.addEventListener(
 
         }
 
-        if (
-            e.target.classList.contains(
-                "edit-finish"
-            )
-        ) {
+        // if (
+        //     e.target.classList.contains(
+        //         "edit-finish"
+        //     )
+        // ) {
 
-            selectedPrints[index].finish =
-                e.target.value;
+        //     selectedPrints[index].finish =
+        //         e.target.value;
 
-                saveSelections();
+        //         saveSelections();
 
-        }
+        // }
 
         if (
             e.target.classList.contains(
@@ -700,11 +663,10 @@ printForm.addEventListener(
                 print => {
 
                     return `
-Image: ${print.title}
-Size: ${print.size}
-Finish: ${print.finish}
-Frame: ${print.frame}
-`;
+                    Image: ${print.title}
+                    Size: ${print.size}
+                    Frame: ${print.frame}
+                    `;
 
                 }
             ).join(
