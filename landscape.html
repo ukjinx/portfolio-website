@@ -114,6 +114,75 @@
 
             <div id="selectedPrints"></div>
 
+    <!-- =========================
+     Pricing Summary
+    ========================= -->
+
+            <div id="pricingSummary">
+
+                <div class="pricing-row">
+
+                    <span>Estimated Total</span>
+
+                    <strong id="pricingTotal">
+                        £0
+                    </strong>
+
+                </div>
+
+                <p id="pricingDisclaimer">
+
+                    Square and panoramic prints
+                require a custom quote.<br><br> Please share the longest edge dimensions and I can provide you with a quote.
+
+                </p>
+
+                <div id="shippingEstimator">
+
+                    <label for="shippingRegion">
+                        Estimate Shipping
+                    </label>
+                
+                    <select id="shippingRegion">
+                
+                        <option value="uk">
+                            United Kingdom & Germany
+                        </option>
+                
+                        <option value="europe">
+                            Rest of Europe
+                        </option>
+                
+                        <option value="world">
+                            Rest of World
+                        </option>
+                
+                    </select>
+                
+                    <div class="pricing-row">
+                
+                        <span>Estimated Shipping</span>
+                
+                        <strong id="shippingTotal">
+                            £0.00
+                        </strong>
+                
+                    </div>
+                
+                    <div class="pricing-row total-row">
+                
+                        <span>Estimated Total + Shipping</span>
+                
+                        <strong id="grandTotal">
+                            £0.00
+                        </strong>
+                
+                    </div>
+                
+                </div>
+
+            </div>
+
             <form id="printForm">
 
                 <input

@@ -254,6 +254,12 @@ function addCurrentPrint() {
 
     updateSelectionTray();
 
+    calculatePricing();
+
+    calculateShipping();
+
+    renderSelectedPrints();
+
     /* =========================
        Tray Animation
     ========================== */
@@ -287,6 +293,240 @@ function addCurrentPrint() {
             "Add To Print Selection";
 
     }, 1400);
+
+}
+
+/* =========================
+   Pricing Logic
+========================= */
+
+const pricing = {
+
+    unframed: {
+        A4: 35,
+        A3: 50
+    },
+
+    framed: {
+        A4: 175,
+        A3: 225
+    }
+
+};
+
+function calculatePricing() {
+
+    let total = 0;
+
+    let hasCustomQuote = false;
+
+    selectedPrints.forEach(print => {
+
+        const isFramed =
+            print.frame !== "Unframed";
+
+        const priceGroup =
+            isFramed
+                ? pricing.framed
+                : pricing.unframed;
+
+        const size =
+            print.size;
+
+            
+        /* =========================
+           Custom Quote Sizes
+        ========================== */
+
+        if (
+            size === "Square"
+            || size === "Pano"
+        ) {
+
+            hasCustomQuote = true;
+
+            return;
+
+        }
+
+        const itemPrice =
+            priceGroup[size];
+
+        if (itemPrice) {
+
+            total += itemPrice;
+
+        }
+
+    });
+
+    const pricingTotal =
+        document.getElementById(
+            "pricingTotal"
+        );
+
+    const pricingDisclaimer =
+        document.getElementById(
+            "pricingDisclaimer"
+        );
+
+    pricingTotal.textContent =
+        `£${total}`;
+
+    if (hasCustomQuote) {
+
+        pricingDisclaimer.style.display =
+            "block";
+
+    } else {
+
+        pricingDisclaimer.style.display =
+            "none";
+
+    }
+
+}
+
+/* =========================
+   Shipping Pricing
+========================= */
+
+const shippingPricing = {
+
+    uk: {
+        unframed: 6.45,
+        framed: 15
+    },
+
+    europe: {
+        unframed: 15,
+        framed: 30
+    },
+
+    world: {
+        unframed: 20,
+        framed: 40
+    }
+
+};
+
+/* =========================
+   Shipping Logic
+========================= */
+
+function calculateShipping() {
+
+    const shippingSelect =
+        document.getElementById(
+            "shippingRegion"
+        );
+
+    if (!shippingSelect) return;
+
+    const region =
+        shippingSelect.value;
+
+    const rates =
+        shippingPricing[region];
+
+    if (!rates) return;
+
+    let shippingTotal = 0;
+
+    let framedCount = 0;
+
+    let hasUnframed = false;
+
+    selectedPrints.forEach(print => {
+
+        const isFramed =
+            print.frame !== "Unframed";
+
+        if (isFramed) {
+
+            framedCount++;
+
+        } else {
+
+            hasUnframed = true;
+
+        }
+
+    });
+
+    /* =========================
+       Unframed Shipping
+    ========================== */
+
+    if (hasUnframed) {
+
+        shippingTotal +=
+            rates.unframed;
+
+    }
+
+    /* =========================
+       Framed Shipping
+    ========================== */
+
+    shippingTotal +=
+        framedCount * rates.framed;
+
+    /* =========================
+       Print Total
+    ========================== */
+
+    let printTotal = 0;
+
+    selectedPrints.forEach(print => {
+
+        const isFramed =
+            print.frame !== "Unframed";
+
+        const priceGroup =
+            isFramed
+                ? pricing.framed
+                : pricing.unframed;
+
+        if (
+            print.size === "Square"
+            || print.size === "Pano"
+        ) return;
+
+        printTotal +=
+            priceGroup[print.size] || 0;
+
+    });
+
+    /* =========================
+       Update UI
+    ========================== */
+
+    const shippingTotalEl =
+        document.getElementById(
+            "shippingTotal"
+        );
+
+    const grandTotalEl =
+        document.getElementById(
+            "grandTotal"
+        );
+
+    if (shippingTotalEl) {
+
+        shippingTotalEl.textContent =
+            `£${shippingTotal.toFixed(2)}`;
+
+    }
+
+    if (grandTotalEl) {
+
+        grandTotalEl.textContent =
+            `£${(
+                printTotal + shippingTotal
+            ).toFixed(2)}`;
+
+    }
 
 }
 
@@ -350,7 +590,24 @@ function renderSelectedPrints() {
 
                 }).join("");
 
-            item.innerHTML = `
+                let itemPrice = "Custom Quote";
+
+const isFramed =
+    print.frame !== "Unframed";
+
+if (
+    print.size !== "Square"
+    && print.size !== "Pano"
+) {
+
+    itemPrice =
+        isFramed
+            ? `£${pricing.framed[print.size]}`
+            : `£${pricing.unframed[print.size]}`;
+
+}
+
+                item.innerHTML = `
                 <img src="${print.src}">
 
                 <div class="selected-print-info">
@@ -358,6 +615,10 @@ function renderSelectedPrints() {
                     <h3>
                         ${print.title}
                     </h3>
+
+                    <p class="selected-print-price">
+                        ${itemPrice}
+                    </p>
 
                     <label>
                         Size
@@ -443,6 +704,12 @@ function openPrintModal() {
 
     renderSelectedPrints();
 
+    calculatePricing();
+
+    calculateShipping();
+
+    renderSelectedPrints();
+
     printModal.classList.add(
         "active"
     );
@@ -484,6 +751,12 @@ selectedPrintsContainer.addEventListener(
 
             updateSelectionTray();
 
+            calculatePricing();
+
+            calculateShipping();
+
+            renderSelectedPrints();
+
         }
 
     }
@@ -513,6 +786,12 @@ selectedPrintsContainer.addEventListener(
 
                 saveSelections();
 
+                calculatePricing();
+
+                calculateShipping();
+
+                renderSelectedPrints();
+
         }
 
         // if (
@@ -533,12 +812,18 @@ selectedPrintsContainer.addEventListener(
                 "edit-frame"
             )
         ) {
-
+        
             selectedPrints[index].frame =
                 e.target.value;
+        
+            saveSelections();
+        
+            calculatePricing();
 
-                saveSelections();
-
+            calculateShipping();
+        
+            renderSelectedPrints();
+        
         }
 
     }
@@ -607,6 +892,22 @@ selectionTray.addEventListener(
 closePrintModalBtn.addEventListener(
     "click",
     closePrintModal
+);
+
+document.addEventListener(
+    "change",
+    e => {
+
+        if (
+            e.target.id ===
+            "shippingRegion"
+        ) {
+
+            calculateShipping();
+
+        }
+
+    }
 );
 
 /* =========================
