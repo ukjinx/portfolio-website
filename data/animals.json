@@ -1,5 +1,13 @@
 [
     {
+        "src": "animals-gallery/heronreen.jpg",
+        "alt": "Heron in Reen",
+        "title": "Heron in sunlight",
+        "location": "South Wales",
+        "description": "A Heron being basket in sunlight, as it pokes out of the grass.",
+        "sizes": ["A4", "A3"]
+    },
+    {
         "src": "animals-gallery/deerandmoon.jpg",
         "alt": "Deer and Moon",
         "title": "Deer under Moonlight",
