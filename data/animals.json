@@ -1,5 +1,13 @@
 [
     {
+        "src": "animals-gallery/woodpecker.jpg",
+        "alt": "Green Woodpecker Flight",
+        "title": "Green Woodpecker Flight",
+        "location": "South Wales",
+        "description": "A stunning Green Woodpecker flying with it's wings spread",
+        "sizes": ["A4", "A3"]
+    },
+    {
         "src": "animals-gallery/heronreen.jpg",
         "alt": "Heron in Reen",
         "title": "Heron in sunlight",
