@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Fine Art Prints | Joe Jenkinson Photography
+    </title>
+
+    <link rel="stylesheet"
+          href="/store.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;500;600&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- =========================
+         Header
+    ========================== -->
+
+    <header class="store-header">
+
+        <h1>
+            Fine Art Prints
+        </h1>
+
+        <p>
+            Museum-quality landscape prints by Joe Jenkinson.
+        </p>
+
+    </header>
+
+    <!-- =========================
+         Store Grid
+    ========================== -->
+
+    <main class="store-grid"
+          id="storeGrid">
+
+    </main>
+
+    <!-- =========================
+         Product Modal
+    ========================== -->
+
+    <div class="modal hidden"
+         id="productModal">
+
+        <div class="modal-content">
+
+            <button class="close-modal"
+                    id="closeModal">
+                ×
+            </button>
+
+            <img id="modalImage"
+                 src=""
+                 alt="">
+
+            <div class="modal-info">
+
+                <h2 id="modalTitle"></h2>
+
+                <p id="modalDescription"></p>
+
+                <div class="selectors">
+
+                    <label>
+                        Print Size
+                    </label>
+
+                    <select id="sizeSelect">
+
+                    </select>
+
+                </div>
+
+                <div class="price"
+                     id="modalPrice">
+                </div>
+
+                <button class="add-cart"
+                        id="addCartBtn">
+
+                    Add To Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- =========================
+         Cart Drawer
+    ========================== -->
+
+    <aside class="cart-drawer"
+           id="cartDrawer">
+
+        <div class="cart-header">
+
+            <h2>
+                Cart
+            </h2>
+
+        </div>
+
+        <div class="cart-items"
+             id="cartItems">
+
+        </div>
+
+        <div class="cart-footer">
+
+            <div class="cart-total"
+                 id="cartTotal">
+
+                £0
+
+            </div>
+
+            <button class="checkout-btn">
+
+                Checkout
+
+            </button>
+
+        </div>
+
+    </aside>
+
+    <!-- Floating Cart -->
+
+    <button class="cart-toggle"
+            id="cartToggle">
+
+        Cart (<span id="cartCount">0</span>)
+
+    </button>
+
+    <script src="/store.js"></script>
+
+</body>
+
+</html>

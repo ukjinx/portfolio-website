@@ -1,0 +1,42 @@
+[
+    {
+      "id": 1,
+      "title": "Snowdonia Dawn",
+      "description": "Morning light over Snowdonia.",
+      "image": "gallery1/snowdonia.jpg",
+      "sizes": [
+        {
+          "name": "Small",
+          "price": 95
+        },
+        {
+          "name": "Medium",
+          "price": 145
+        },
+        {
+          "name": "Large",
+          "price": 225
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Icelandic Falls",
+      "description": "Long exposure waterfall in Iceland.",
+      "image": "gallery1/iceland.jpg",
+      "sizes": [
+        {
+          "name": "Small",
+          "price": 110
+        },
+        {
+          "name": "Medium",
+          "price": 170
+        },
+        {
+          "name": "Large",
+          "price": 260
+        }
+      ]
+    }
+  ]
