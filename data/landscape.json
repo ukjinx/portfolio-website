@@ -1,5 +1,13 @@
 [
     {
+        "src": "landscape-gallery/eclipse.jpg",
+        "alt": "Eclipse Pano",
+        "title": "Stages of the Eclipse",
+        "location": "Newport",
+        "description": "Panoramic Photo of the stages of the Eclipse from the 12th August 2026",
+        "sizes": ["Pano"]
+    },
+    {
         "src": "landscape-gallery/beddgelertforest.jpg",
         "alt": "Beddgelert Forest",
         "title": "Beddgelert Forest",
